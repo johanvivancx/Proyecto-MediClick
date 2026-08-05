@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediClick - Mi Perfil</title>
+</head>
+<body>
+
+    
+    <header>
+        <h1>MediClick</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="mi-perfil-elian.html" aria-current="page">Mi Perfil</a></li>
+                <li><a href="#">Directorio Médico</a></li>
+                <li><a href="#">Contacto / Ayuda</a></li>
+                <li><a href="#">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        
+        <section aria-labelledby="titulo-perfil">
+            <h2 id="titulo-perfil">Actualiza tu Información Personal</h2>
+
+            
+            <figure>
+                <img src="../img/perfil-usuario.png" alt="Foto de perfil del usuario Elian">
+                <figcaption>Cambiar foto de perfil</figcaption>
+            </figure>
+
+            
+            <form action="#" method="post">
+                
+                <div>
+                    <label for="nombres">Nombres:</label>
+                    <input type="text" id="nombres" name="nombres" placeholder="Ingrese dos nombres" required>
+                </div>
+
+                <div>
+                    <label for="apellidos">Apellidos:</label>
+                    <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese dos apellidos" required>
+                </div>
+
+                <div>
+                    <label for="cedula">Cédula / Identificación:</label>
+                    <input type="text" id="cedula" name="cedula" placeholder="Ingresa tu número de identificación" required>
+                </div>
+
+                <div>
+                    <label for="correo">Correo Electrónico:</label>
+                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+                </div>
+
+                <button type="submit">Guardar Cambios</button>
+            </form>
+        </section>
+
+        
+        <section aria-label="Información de confianza y soporte">
+            <article>
+                <h3>Atención Confiable</h3>
+                <p>Servicio médico de calidad garantizado.</p>
+            </article>
+
+            <article>
+                <h3>Médicos Verificados</h3>
+                <p>Profesionales de la salud certificados.</p>
+            </article>
+
+            <article>
+                <h3>Seguridad en tus datos</h3>
+                <p>Protección total de tu información personal.</p>
+            </article>
+
+            <article>
+                <h3>Ayuda y Soporte 24/7</h3>
+                <p>Asistencia disponible en todo momento.</p>
+            </article>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2026 MediClick - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
