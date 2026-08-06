@@ -158,3 +158,41 @@ button:disabled{
     background:#bdbdbd;
     cursor:not-allowed;
 }
+
+/* TARJETAS */
+
+section:last-of-type{
+    display:flex;
+    gap:20px;
+    justify-content:space-between;
+}
+
+section:last-of-type article{
+    background:var(--white);
+    border:1px solid #dddddd;
+    border-radius:var(--radius);
+    padding:20px;
+    width:30%;
+    box-shadow:0 2px 8px rgba(0,0,0,0.1);
+    transition:0.3s;
+}
+
+section:last-of-type article:hover{
+    transform:translateY(-5px);
+    box-shadow:0 4px 12px rgba(0,0,0,0.15);
+}
+
+section:last-of-type h3{
+    color:var(--primary);
+    margin-bottom:10px;
+}
+
+/* FOOTER */
+
+footer{
+    background:var(--primary-dark);
+    color:var(--white);
+    text-align:center;
+    padding:20px;
+    margin-top:40px;
+}
