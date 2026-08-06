@@ -103,3 +103,58 @@ section:first-of-type img{
     width:300px;
     max-width:100%;
 }
+
+/* FORMULARIO */
+
+form{
+    background:var(--white);
+    padding:25px;
+    border:1px solid #d9d9d9;
+    border-radius:var(--radius);
+    max-width:500px;
+}
+
+label{
+    display:block;
+    margin-bottom:6px;
+    font-weight:bold;
+}
+
+input{
+    width:100%;
+    padding:10px;
+    margin-bottom:15px;
+    border:1px solid #cccccc;
+    border-radius:var(--radius);
+    font-size:15px;
+}
+
+input:focus{
+    outline:none;
+    border-color:var(--primary);
+}
+
+/* BOTÓN */
+
+button{
+    background:var(--primary);
+    color:var(--white);
+    border:none;
+    padding:12px 24px;
+    border-radius:var(--radius);
+    cursor:pointer;
+    font-size:16px;
+}
+
+button:hover{
+    background:var(--primary-dark);
+}
+
+button:focus{
+    outline:2px solid var(--secondary);
+}
+
+button:disabled{
+    background:#bdbdbd;
+    cursor:not-allowed;
+}
