@@ -47,3 +47,59 @@ h1,h2,h3{
 p{
     margin-bottom:15px;
 }
+
+/* HEADER */
+
+header{
+    background:var(--white);
+    padding:20px;
+    border-bottom:2px solid #e5e5e5;
+}
+
+header h1{
+    color:var(--primary);
+    text-align:center;
+    margin-bottom:15px;
+}
+
+/* NAVEGACIÓN */
+
+nav ul{
+    list-style:none;
+    display:flex;
+    justify-content:center;
+    gap:25px;
+}
+
+nav a{
+    text-decoration:none;
+    color:var(--black);
+    font-weight:bold;
+}
+
+nav a:hover{
+    color:var(--primary);
+}
+
+/* SECCIÓN PRINCIPAL */
+
+section:first-of-type{
+    display:flex;
+    align-items:center;
+    justify-content:space-between;
+    gap:30px;
+}
+
+section:first-of-type article{
+    width:50%;
+}
+
+section:first-of-type aside{
+    width:50%;
+    text-align:center;
+}
+
+section:first-of-type img{
+    width:300px;
+    max-width:100%;
+}
