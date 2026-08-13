@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>MediClick - Mi Perfil</title>
+
+    <link rel="stylesheet" href="mi-perfil.css">
+</head>
+
+<body>
+
+    <header class="header">
+
+        <h1 class="logo">MEDICLICK</h1>
+
+        <nav class="menu" aria-label="Navegación principal">
+
+            <a href="../index.html">Inicio</a>
+            <a href="#">Reservas</a>
+            <a href="mi-perfil-elian.html" class="activo" aria-current="page">Mi Perfil</a>
+            <a href="#">Directorio Médico</a>
+            <a href="#">Contacto / Ayuda</a>
+
+            <a href="#" class="login">
+                👤 Iniciar Sesión
+            </a>
+
+        </nav>
+
+    </header>
+
+
+    <main class="contenido">
+
+        <section class="perfil" aria-labelledby="titulo-perfil">
+
+            <h2 id="titulo-perfil">
+                Actualiza tu Información Personal
+            </h2>
+
+
+            <figure class="foto-perfil">
+
+                <img
+                    src="../img/perfil-usuario.png"
+                    alt="Foto de perfil del usuario"
+                >
+
+                <figcaption>
+                    Cambiar foto de perfil
+                </figcaption>
+
+            </figure>
+
+
+            <form class="formulario" action="#" method="post">
+
+                <div class="campo">
+
+                    <label for="nombres">
+                        Nombres:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="nombres"
+                        name="nombres"
+                        placeholder="Ingrese dos nombres"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="apellidos">
+                        Apellidos:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="apellidos"
+                        name="apellidos"
+                        placeholder="Ingrese dos apellidos"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="cedula">
+                        Cédula / Identificación:
+                    </label>
+
+                    <input
+                        type="text"
+                        id="cedula"
+                        name="cedula"
+                        placeholder="Ingresa tu número de identificación"
+                        required
+                    >
+
+                </div>
+
+
+                <div class="campo">
+
+                    <label for="correo">
+                        Correo Electrónico:
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="ejemplo@correo.com"
+                        required
+                    >
+
+                </div>
+
+
+                <button class="boton-guardar" type="submit">
+                    Guardar Cambios
+                </button>
+
+            </form>
+
+        </section>
+
+    </main>
+
+
+    <section class="informacion" aria-label="Información de confianza y soporte">
+
+        <article>
+            <h3>Atención Confiable</h3>
+            <p>Servicio médico de calidad garantizado.</p>
+        </article>
+
+        <article>
+            <h3>Médicos Verificados</h3>
+            <p>Profesionales de la salud certificados.</p>
+        </article>
+
+        <article>
+            <h3>Seguridad en tus datos</h3>
+            <p>Protección total de tu información personal.</p>
+        </article>
+
+        <article>
+            <h3>Ayuda y Soporte 24/7</h3>
+            <p>Asistencia disponible en todo momento.</p>
+        </article>
+
+    </section>
+
+
+    <footer class="footer">
+        <p>&copy; 2026 MediClick - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+
+</html>

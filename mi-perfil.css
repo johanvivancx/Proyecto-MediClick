@@ -1,0 +1,220 @@
+:root {
+    --azul: #168be8;
+    --azul-claro: #e1f3ff;
+    --morado-claro: #f3edf7;
+    --gris: #d1ccd3;
+    --texto: #222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    background-color: white;
+}
+
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 45px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    margin: 0;
+    color: var(--azul);
+    font-size: 14px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 32px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--azul);
+    font-size: 12px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.activo {
+    font-weight: bold;
+}
+
+.login {
+    background-color: var(--azul);
+    color: white !important;
+
+    padding: 10px 15px;
+}
+
+
+
+
+.contenido {
+    background-color: var(--azul-claro);
+
+    padding: 40px 20px;
+
+    display: flex;
+    justify-content: center;
+}
+
+
+
+
+.perfil {
+    width: 650px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+.perfil h2 {
+    margin-top: 0;
+    margin-bottom: 20px;
+
+    font-size: 18px;
+}
+
+
+
+
+.foto-perfil {
+    margin: 0 0 25px;
+}
+
+.foto-perfil img {
+    width: 90px;
+    height: 90px;
+
+    object-fit: cover;
+
+    border-radius: 50%;
+}
+
+.foto-perfil figcaption {
+    margin-top: 8px;
+
+    color: var(--azul);
+
+    font-size: 11px;
+}
+
+
+
+
+.formulario {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+
+    gap: 15px;
+
+    text-align: left;
+}
+
+.campo {
+    display: flex;
+    flex-direction: column;
+}
+
+.campo label {
+    margin-bottom: 5px;
+
+    font-size: 11px;
+}
+
+.campo input {
+    padding: 10px;
+
+    border: 1px solid var(--gris);
+
+    background-color: var(--morado-claro);
+
+    font-size: 11px;
+}
+
+.campo input:focus {
+    outline: 1px solid var(--azul);
+}
+
+
+
+
+.boton-guardar {
+    grid-column: 1 / 3;
+
+    border: none;
+
+    background-color: var(--azul);
+    color: white;
+
+    padding: 12px;
+
+    cursor: pointer;
+}
+
+.boton-guardar:hover {
+    background-color: #0876cc;
+}
+
+
+
+
+.informacion {
+    background-color: var(--azul-claro);
+
+    display: flex;
+    justify-content: space-around;
+
+    padding: 25px;
+}
+
+.informacion article {
+    width: 20%;
+
+    text-align: center;
+}
+
+.informacion h3 {
+    margin: 0 0 5px;
+
+    font-size: 12px;
+}
+
+.informacion p {
+    margin: 0;
+
+    font-size: 10px;
+}
+
+
+
+
+.footer {
+    text-align: center;
+
+    padding: 12px;
+
+    font-size: 10px;
+
+    color: #777;
+}
