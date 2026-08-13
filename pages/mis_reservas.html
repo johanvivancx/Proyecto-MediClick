@@ -5,130 +5,279 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <title>Pantalla Mis Reservas</title>
+    <title>Pantalla Mis Reservas Nicolas</title>
 
-   <link rel="stylesheet" href="mis_reservas.css">
+    
+    <link rel="stylesheet" href="mis_reservas.css">
 </head>
+
 <body>
 
-    <div>
+    
+    <div class="barra-navegador">
+
         <div>
             <span>Pantalla Mis Reservas Nicolas</span>
         </div>
+
         <div>
             <span>www.mediclick/inicio.com</span>
         </div>
+
         <div>
-            <div>
-                <img src="" alt="Perfil">
-            </div>
+            <span>👤</span>
         </div>
+
     </div>
 
-    <header>
-        <div>
+
+   
+    <header class="header">
+
+        <div class="logo">
             MEDICLICK
         </div>
-        <nav>
+
+        <nav class="menu">
             <a href="#">Inicio</a>
             <a href="#">Reservas</a>
             <a href="#">Mi Perfil</a>
             <a href="#">Directorio Medico</a>
             <a href="#">Contacto / Ayuda</a>
         </nav>
+
         <div>
-            <a href="#">Iniciar Sesión</a>
+            <a class="login" href="#">
+                👤 Iniciar Sesión
+            </a>
         </div>
+
     </header>
 
-    <div>
-        <button>
-            <span>&larr;</span>
+
+    
+    <div class="titulo-reservas">
+
+        <button class="volver">
+            &larr;
         </button>
+
         <h1>Mis Reservas</h1>
+
     </div>
 
-    <main>
-        <table>
+
+    
+    <main class="contenido">
+
+        <table class="tabla-reservas">
+
             <thead>
+
                 <tr>
                     <th>Fecha</th>
                     <th>Especialidad</th>
                     <th>Detalle</th>
                     <th>Estado</th>
                 </tr>
+
             </thead>
+
+
             <tbody>
-                <tr>
-                    <td>
-                        <div>
-                            Mañana<br><span>22</span><br>MAY
-                        </div>
-                    </td>
-                    <td>DENTISTA</td>
-                    <td>
-                        <p>7pm</p>
-                        <p>Dr. Felipe Campos</p>
-                        <p>Consultorio 101</p>
-                    </td>
-                    <td>
-                        <span>Confirmada</span>
-                    </td>
-                </tr>
+
+                
 
                 <tr>
+
                     <td>
-                        <div>
-                            Jueves<br><span>23</span><br>MAY
+
+                        <div class="fecha">
+                            Mañana
+                            <span>22</span>
+                            MAY
                         </div>
+
                     </td>
-                    <td>CARDIOLOGO</td>
-                    <td>
+
+
+                    <td class="especialidad">
+                        DENTISTA
+                    </td>
+
+
+                    <td class="detalle">
+
                         <p>7pm</p>
-                        <p>Dr. Elian Valenzuela</p>
-                        <p>Consultorio 203</p>
+
+                        <p>
+                            Dr. Felipe Campos
+                        </p>
+
+                        <p class="consultorio">
+                            Consultorio 101
+                        </p>
+
                     </td>
+
+
                     <td>
-                        <span>Confirmada</span>
+
+                        <span class="confirmada">
+                            Confirmada
+                        </span>
+
                     </td>
+
                 </tr>
 
+
+               
+
                 <tr>
+
                     <td>
-                        <div>
-                            Sabado<br><span>22</span><br>MAY
+
+                        <div class="fecha">
+                            Jueves
+                            <span>23</span>
+                            MAY
                         </div>
+
                     </td>
-                    <td>PEDIATRA</td>
-                    <td>
+
+
+                    <td class="especialidad">
+                        CARDIOLOGO
+                    </td>
+
+
+                    <td class="detalle">
+
                         <p>7pm</p>
-                        <p>Dr. Andrés Silva</p>
-                        <p>Consultorio 156</p>
+
+                        <p>
+                            Dr. Elian Valenzuela
+                        </p>
+
+                        <p class="consultorio">
+                            Consultorio 203
+                        </p>
+
                     </td>
+
+
                     <td>
-                        <span>Confirmada</span>
+
+                        <span class="confirmada">
+                            Confirmada
+                        </span>
+
                     </td>
+
                 </tr>
+
+
+               
+
+                <tr>
+
+                    <td>
+
+                        <div class="fecha">
+                            Sabado
+                            <span>22</span>
+                            MAY
+                        </div>
+
+                    </td>
+
+
+                    <td class="especialidad">
+                        PEDIATRA
+                    </td>
+
+
+                    <td class="detalle">
+
+                        <p>7pm</p>
+
+                        <p>
+                            Dr. Andrés Silva
+                        </p>
+
+                        <p class="consultorio">
+                            Consultorio 156
+                        </p>
+
+                    </td>
+
+
+                    <td>
+
+                        <span class="confirmada">
+                            Confirmada
+                        </span>
+
+                    </td>
+
+                </tr>
+
             </tbody>
+
         </table>
+
     </main>
 
-    <footer>
-        <div>
+
+    
+    <footer class="footer">
+
+        <div class="footer-contenido">
+
             <div>
-                <span>Atencion Confianble</span>
+                <span>♡</span>
+
+                <p>
+                    Atención<br>
+                    Confiable
+                </p>
             </div>
+
+
             <div>
-                <span>Medicos Verificados</span>
+                <span>♙</span>
+
+                <p>
+                    Médicos<br>
+                    Verificados
+                </p>
             </div>
+
+
             <div>
-                <span>Seguridad en tus datos</span>
+                <span>🔒</span>
+
+                <p>
+                    Seguridad en<br>
+                    tus datos
+                </p>
             </div>
+
+
             <div>
-                <span>Ayuda y Soporte 24/7</span>
+                <span>🎧</span>
+
+                <p>
+                    Ayuda y<br>
+                    Soporte 24/7
+                </p>
             </div>
+
         </div>
+
     </footer>
 
 </body>
+
 </html>
