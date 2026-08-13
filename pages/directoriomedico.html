@@ -13,117 +13,113 @@
 
 <body>
 
-    <header>
-
-        <h1>MediClick</h1>
-
+    <header class="navbar">
+        <div class="logo">MEDICLICK</div>
         <nav>
-
-            <ul>
-
+            <ul class="nav-links">
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="directoriomedico.html">Directorio Médico</a></li>
-                <li><a href="#">Mis Reservas</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Iniciar Sesión</a></li>
-
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Mi Perfil</a></li>
+                <li><a href="directoriomedico.html" class="active">Directorio Médico</a></li>
+                <li><a href="#">Contacto / Ayuda</a></li>
             </ul>
-
         </nav>
-
+        <a href="#" class="btn-primary">Iniciar Sesión</a>
     </header>
 
-    <main>
+    <div class="sub-header">
+        <a href="../index.html" class="back-link">← Directorio Médico</a>
+    </div>
 
-        <section>
+    <main class="container">
 
-            <article>
+        <section class="search-section">
+            <div class="search-bar">
+                <span class="icon">🔍</span>
+                <input type="text" placeholder="Buscar médico o especialidad">
+            </div>
 
-                <h2>Directorio Médico</h2>
+            <div class="filters-grid">
+                <select class="filter-select">
+                    <option value="">Especialidad</option>
+                    <option value="cardiologia">Cardiología</option>
+                    <option value="odontologia">Odontología</option>
+                    <option value="pediatria">Pediatría</option>
+                </select>
 
-                <p>
-                    Busca especialistas y encuentra el médico que necesitas.
-                </p>
+                <select class="filter-select">
+                    <option value="">Disponibilidad</option>
+                    <option value="hoy">Hoy</option>
+                    <option value="semana">Esta semana</option>
+                </select>
 
+                <select class="filter-select">
+                    <option value="">Ubicación</option>
+                    <option value="quito-sur">Quito Sur</option>
+                    <option value="quito-norte">Quito Norte</option>
+                </select>
+
+                <select class="filter-select">
+                    <option value="">Mis filtros</option>
+                </select>
+            </div>
+        </section>
+
+        <section class="doctors-grid">
+            
+            <article class="doctor-card">
+                <div class="avatar-container">
+                    <img src="../img/doctor.png" alt="Dr. Andrés Silva" class="doctor-avatar">
+                </div>
+                <h3>Dr. Andrés Silva</h3>
+                <p class="specialty">Cardiología</p>
+                <p class="location">Quito sur</p>
             </article>
 
-            <aside>
+            <article class="doctor-card">
+                <div class="avatar-container">
+                    <img src="../img/doctor.png" alt="Dr. Felipe Campos" class="doctor-avatar">
+                </div>
+                <h3>Dr. Felipe Campos</h3>
+                <p class="specialty">Cardiología</p>
+                <p class="location">Quito sur</p>
+            </article>
 
-                <img src="../img/directorio.png"
-                     alt="Directorio de médicos">
-
-            </aside>
+            <article class="doctor-card">
+                <div class="avatar-container">
+                    <img src="../img/doctor.png" alt="Dr. Elian Valenzuela" class="doctor-avatar">
+                </div>
+                <h3>Dr. Elian Valenzuela</h3>
+                <p class="specialty">Dermatología</p>
+                <p class="location">Quito sur</p>
+            </article>
 
         </section>
 
-        <section>
-
-            <h2>Buscar especialista</h2>
-
-            <form action="#" method="get">
-
-                <label for="especialidad">
-                    Especialidad
-                </label>
-
-                <input
-                    type="text"
-                    id="especialidad"
-                    name="especialidad"
-                    placeholder="Ejemplo: Cardiología">
-
-                <br><br>
-
-                <label for="ciudad">
-                    Ciudad
-                </label>
-
-                <input
-                    type="text"
-                    id="ciudad"
-                    name="ciudad"
-                    placeholder="Ejemplo: Quito">
-
-                <br><br>
-
-                <button type="submit">
-                    Buscar
-                </button>
-
-            </form>
-
-        </section>
-
-        <section>
-
-            <h2>Médicos disponibles</h2>
-
-            <article>
-
-                <h3>Dra. María López</h3>
-                <p>Especialidad: Cardiología</p>
-                <p>Horario: Lunes a Viernes</p>
-
-            </article>
-
-            <article>
-                <h3>Dr. Carlos Pérez</h3>
-                <p>Especialidad: Odontología</p>
-                <p>Horario: Martes a Sábado</p>
-            </article>
-
-            <article>
-                <h3>Dra. Andrea Ruiz</h3>
-                <p>Especialidad: Pediatria</p>
-                <p>Horario: Lunes a Viernes</p>
-            </article>
-
-        </section>
     </main>
+
+    <section class="benefits-banner">
+        <div class="benefit-item">
+            <span class="benefit-icon">🛡️</span>
+            <div><strong>Atención Confiable</strong></div>
+        </div>
+        <div class="benefit-item">
+            <span class="benefit-icon">👨‍⚕️</span>
+            <div><strong>Médicos Verificados</strong></div>
+        </div>
+        <div class="benefit-item">
+            <span class="benefit-icon">🔒</span>
+            <div><strong>Seguridad en tus datos</strong></div>
+        </div>
+        <div class="benefit-item">
+            <span class="benefit-icon">🎧</span>
+            <div><strong>Ayuda y Soporte 24/7</strong></div>
+        </div>
+    </section>
+
     <footer>
-        <p>
-            © 2026 MediClick - Todos los derechos reservados.
-        </p>
+        <p>© 2026 MediClick - Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>
