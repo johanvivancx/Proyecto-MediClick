@@ -300,8 +300,6 @@ select.form-control {
 
 .footer-icon {
     font-size: 20px;
-=======
-:root{
     --primary:#0088FF;
     --primary-dark:#00437D;
     --secondary:#5D5FEF;
@@ -498,5 +496,4 @@ footer{
     text-align:center;
     padding:20px;
     margin-top:40px;
-main
 }
