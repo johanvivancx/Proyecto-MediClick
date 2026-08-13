@@ -1,0 +1,218 @@
+:root {
+    --primary-blue: #0088ff;
+    --light-blue-bg: #eaf3ff;
+    --card-blue-bg: #dbeeff;
+    --text-dark: #2c3e50;
+    --text-muted: #6c757d;
+    --input-bg: #f4eff6;
+    --white: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--white);
+    color: var(--text-dark);
+}
+
+/* HEADER Y NAVEGACIÓN */
+.main-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1.5rem 5%;
+    background-color: var(--white);
+}
+
+.logo h1 {
+    color: var(--primary-blue);
+    font-size: 1.8rem;
+    font-weight: 700;
+}
+
+.main-nav ul {
+    display: flex;
+    list-style: none;
+    align-items: center;
+    gap: 2rem;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 500;
+    font-size: 0.95rem;
+    transition: opacity 0.2s;
+}
+
+.main-nav a:hover {
+    opacity: 0.8;
+}
+
+.btn-login {
+    background-color: var(--primary-blue);
+    color: var(--white) !important;
+    padding: 0.6rem 1.4rem;
+    border-radius: 4px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600 !important;
+}
+
+/* HERO */
+.hero-section {
+    background-color: var(--light-blue-bg);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 3rem 10%;
+    min-height: 280px;
+}
+
+.hero-text h2 {
+    font-size: 2.2rem;
+    color: var(--text-dark);
+    line-height: 1.2;
+    margin-bottom: 1rem;
+}
+
+.hero-text p {
+    color: var(--text-muted);
+    max-width: 350px;
+    font-size: 1rem;
+}
+
+.hero-image img {
+    width: 180px;
+    height: 180px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+/* BARRA DE BÚSQUEDA */
+.search-section {
+    padding: 2.5rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.search-form {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.input-group {
+    flex: 1;
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.search-icon {
+    position: absolute;
+    left: 1.2rem;
+    color: var(--text-dark);
+    font-size: 1.2rem;
+}
+
+.input-group input {
+    width: 100%;
+    padding: 1.2rem 1rem 1.2rem 3.2rem;
+    background-color: var(--input-bg);
+    border: none;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+}
+
+.btn-search {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 1.2rem 3rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background 0.3s;
+}
+
+.btn-search:hover {
+    background-color: #0070d2;
+}
+
+/* TARJETAS ACCESOS RÁPIDOS */
+.quick-access {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 1.5rem;
+    padding: 1rem 5% 3rem 5%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.card {
+    background-color: var(--card-blue-bg);
+    padding: 2.5rem 1rem;
+    text-align: center;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.card:hover {
+    transform: translateY(-3px);
+    background-color: #cee5ff;
+}
+
+.card-icon {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 1rem;
+}
+
+.card h3 {
+    font-size: 1rem;
+    color: var(--text-dark);
+    font-weight: 600;
+}
+
+/* BARRA DE BENEFICIOS */
+.features-bar {
+    background-color: var(--light-blue-bg);
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 2rem 5%;
+    margin-top: 1rem;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 0.95rem;
+}
+
+.feature-item i {
+    font-size: 1.8rem;
+}
+
+/* FOOTER */
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--white);
+    color: var(--text-muted);
+    font-size: 0.85rem;
+}
