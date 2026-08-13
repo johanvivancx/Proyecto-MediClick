@@ -4,137 +4,73 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>MediClick</title>
-
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
+
 <header>
-
     <h1>MediClick</h1>
-
     <nav>
-
         <ul>
-
             <li><a href="#">Inicio</a></li>
-
             <li><a href="#">Directorio Médico</a></li>
-
             <li><a href="#">Mis Reservas</a></li>
-
             <li><a href="#">Contacto</a></li>
-
             <li><a href="#">Iniciar Sesión</a></li>
-
         </ul>
-
     </nav>
-
 </header>
 
 <main>
-
     <section>
-
         <article>
-
             <h2>Tu salud, nuestra prioridad</h2>
-
-            <p>
-                Agenda tus citas médicas de forma rápida y sencilla.
-            </p>
-
+            <p>Agenda tus citas médicas de forma rápida y sencilla.</p>
         </article>
-
         <aside>
-
-            <img
-                src="img/doctor.png"
-                alt="Imagen de un medico">
-
+            <img src="img/doctor.png" alt="Imagen de un medico">
         </aside>
-
-    </section>
-    <section>
-
-    <h2>Buscar cita</h2>
-
-    <form>
-
-        <label for="especialidad">
-            Especialidad
-        </label>
-
-        <input
-            type="text"
-            id="especialidad"
-            placeholder="Especialidad">
-
-        <br><br>
-
-        <label for="ubicacion">
-            Ubicación
-        </label>
-
-        <input
-            type="text"
-            id="ubicacion"
-            placeholder="Ciudad">
-
-        <br><br>
-
-        <button type="submit">
-            Buscar
-        </button>
-
-    </form>
-
     </section>
 
     <section>
+        <h2>Buscar cita</h2>
+        <form>
+            <div class="form-group">
+                <label for="especialidad">Especialidad</label>
+                <input type="text" id="especialidad" placeholder="Especialidad">
+            </div>
 
-    <h2>Accesos rápidos</h2>
+            <div class="form-group">
+                <label for="ubicacion">Ubicación</label>
+                <input type="text" id="ubicacion" placeholder="Ciudad">
+            </div>
 
-    <article>
-
-        <h3>Reservar cita</h3>
-
-        <p>Agenda una nueva cita médica.</p>
-
-    </article>
-
-    <article>
-
-        <h3>Directorio Médico</h3>
-
-        <p>Busca especialistas disponibles.</p>
-
-    </article>
-
-    <article>
-
-        <h3>Mis Reservas</h3>
-
-        <p>Consulta tus próximas citas.</p>
-
-    </article>
-
+            <button type="submit">Buscar</button>
+        </form>
     </section>
 
+    <section>
+        <h2>Accesos rápidos</h2>
+        <article>
+            <h3>Reservar cita</h3>
+            <p>Agenda una nueva cita médica.</p>
+        </article>
+        <article>
+            <h3>Directorio Médico</h3>
+            <p>Busca especialistas disponibles.</p>
+        </article>
+        <article>
+            <h3>Mis Reservas</h3>
+            <p>Consulta tus próximas citas.</p>
+        </article>
+    </section>
 </main>
 
+<footer>
+    <p>© 2026 MediClick - Todos los derechos reservados.</p>
+</footer>
 
-    <footer>
-
-    <p>
-        © 2026 MediClick - Todos los derechos reservados.
-    </p>
-
-    </footer>
-    
 </body>
-
 </html>
