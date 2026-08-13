@@ -1,62 +1,121 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
     <title>MediClick - Iniciar Sesión</title>
+
+    <link rel="stylesheet" href="iniciar-sesion.css">
 </head>
+
 <body>
 
-    
-    <header>
-        <h1>MediClick</h1>
-        <nav aria-label="Navegación principal">
-            <ul>
-                <li><a href="index.html">Inicio</a></li>
-                <li><a href="reservas.html">Reservas</a></li>
-                <li><a href="mi-perfil-elian.html">Mi Perfil</a></li>
-                <li><a href="directorio.html">Directorio Médico</a></li>
-                <li><a href="contacto.html">Contacto / Ayuda</a></li>
-                <li><a href="iniciar-sesion.html" aria-current="page">Iniciar Sesión</a></li>
-            </ul>
+    <header class="header">
+
+        <h1 class="logo">MEDICLICK</h1>
+
+        <nav class="menu" aria-label="Navegación principal">
+
+            <a href="../index.html">Inicio</a>
+            <a href="../reservas.html">Reservas</a>
+            <a href="mi-perfil-elian.html">Mi Perfil</a>
+            <a href="#">Directorio Médico</a>
+            <a href="#">Contacto / Ayuda</a>
+
+            <a class="login-activo" href="#" aria-current="page">
+                👤 Iniciar Sesión
+            </a>
+
         </nav>
+
     </header>
 
-    
-    <main>
-        <section aria-labelledby="titulo-login">
-            <h2 id="titulo-login">Iniciar Sesión</h2>
-            
-            <figure>
-                
-                <img src="../img/icono-usuario.png" alt="Icono de usuario para iniciar sesión">
+
+    <main class="contenido-login">
+
+        <section class="tarjeta-login" aria-labelledby="titulo-login">
+
+            <figure class="perfil-login">
+
+                <img
+                    src="../img/icono-usuario.png"
+                    alt="Icono de usuario para iniciar sesión"
+                >
+
             </figure>
 
-            <form action="#" method="post">
-                <div>
-                    <label for="correo">Correo Electrónico:</label>
-                    <input type="email" id="correo" name="correo" placeholder="ejemplo@correo.com" required>
+
+            <h2 id="titulo-login">
+                Iniciar Sesión
+            </h2>
+
+
+            <form class="formulario-login" action="#" method="post">
+
+                <div class="campo">
+
+                    <label for="correo">
+                        ✉ Correo Electrónico
+                    </label>
+
+                    <input
+                        type="email"
+                        id="correo"
+                        name="correo"
+                        placeholder="Correo Electrónico"
+                        required
+                    >
+
                 </div>
 
-                <div>
-                    <label for="password">Contraseña:</label>
-                    <input type="password" id="password" name="password" placeholder="Ingresa tu contraseña" required>
+
+                <div class="campo">
+
+                    <label for="password">
+                        🔒 Contraseña
+                    </label>
+
+                    <input
+                        type="password"
+                        id="password"
+                        name="password"
+                        placeholder="Contraseña"
+                        required
+                    >
+
                 </div>
 
-                <button type="submit">Entrar</button>
+
+                <button class="boton-entrar" type="submit">
+                    ENTRAR
+                </button>
+
             </form>
 
-            <aside aria-label="Enlaces adicionales de acceso">
-                <p><a href="recuperar.html">¿Olvidaste tu contraseña?</a></p>
-                <p>¿Eres nuevo? <a href="registro.html">Regístrate Aquí</a></p>
+
+            <aside class="opciones-login">
+
+                <p>
+                    <a href="#">
+                        ¿Olvidaste tu contraseña?
+                    </a>
+                </p>
+
+                <p>
+                    ¿Eres nuevo?
+                    <a href="registro.html">
+                        Regístrate Aquí
+                    </a>
+                </p>
+
             </aside>
+
         </section>
+
     </main>
 
-    
-    <footer>
-        <p>&copy; 2026 MediClick - Todos los derechos reservados.</p>
-    </footer>
-
 </body>
+
 </html>

@@ -1,0 +1,181 @@
+:root {
+    --azul: #168be8;
+    --azul-claro: #dff1ff;
+    --morado-claro: #f3edf7;
+    --gris: #d6d1d8;
+    --texto: #222;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    background-color: white;
+}
+
+
+
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 15px 45px;
+
+    border-bottom: 1px solid #ddd;
+}
+
+.logo {
+    margin: 0;
+    color: var(--azul);
+    font-size: 14px;
+}
+
+.menu {
+    display: flex;
+    align-items: center;
+    gap: 35px;
+}
+
+.menu a {
+    text-decoration: none;
+    color: var(--azul);
+    font-size: 12px;
+}
+
+.menu a:hover {
+    text-decoration: underline;
+}
+
+.login-activo {
+    background-color: var(--azul);
+    color: white !important;
+
+    padding: 10px 15px;
+}
+
+
+
+
+.contenido-login {
+    min-height: 500px;
+
+    background-color: var(--azul-claro);
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    padding: 45px;
+}
+
+
+
+
+.tarjeta-login {
+    width: 330px;
+
+    background-color: white;
+
+    padding: 30px;
+
+    text-align: center;
+}
+
+
+
+
+.perfil-login {
+    margin: 0 0 15px;
+}
+
+.perfil-login img {
+    width: 75px;
+    height: 75px;
+    object-fit: contain;
+}
+
+.tarjeta-login h2 {
+    font-size: 14px;
+    font-weight: normal;
+
+    margin-bottom: 25px;
+}
+
+
+
+
+.formulario-login {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.campo {
+    background-color: var(--morado-claro);
+    padding: 10px;
+
+    text-align: left;
+}
+
+.campo label {
+    display: block;
+
+    font-size: 11px;
+
+    margin-bottom: 5px;
+}
+
+.campo input {
+    width: 100%;
+
+    border: none;
+    outline: none;
+
+    background-color: transparent;
+
+    padding: 5px;
+
+    font-size: 11px;
+}
+
+
+
+
+.boton-entrar {
+    border: none;
+
+    background-color: var(--azul);
+    color: white;
+
+    padding: 11px;
+
+    cursor: pointer;
+}
+
+.boton-entrar:hover {
+    background-color: #0876cc;
+}
+
+
+
+
+.opciones-login {
+    margin-top: 15px;
+}
+
+.opciones-login p {
+    margin: 6px 0;
+
+    font-size: 10px;
+}
+
+.opciones-login a {
+    color: var(--azul);
+    text-decoration: none;
+}
