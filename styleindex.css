@@ -1,3 +1,6 @@
+/* ==========================================
+   1. VARIABLES Y RESET (Mobile First)
+   ========================================== */
 :root {
     --primary-blue: #0088ff;
     --light-blue-bg: #eaf3ff;
@@ -21,12 +24,20 @@ body {
     color: var(--text-dark);
 }
 
-/* HEADER Y NAVEGACIÓN */
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* ==========================================
+   2. HEADER / NAVEGACIÓN (Celular)
+   ========================================== */
 .main-header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 1.5rem 5%;
+    gap: 1rem;
+    padding: 1rem 5%;
     background-color: var(--white);
 }
 
@@ -38,9 +49,11 @@ body {
 
 .main-nav ul {
     display: flex;
+    flex-direction: column;
     list-style: none;
     align-items: center;
-    gap: 2rem;
+    gap: 1rem;
+    width: 100%;
 }
 
 .main-nav a {
@@ -48,11 +61,6 @@ body {
     color: var(--primary-blue);
     font-weight: 500;
     font-size: 0.95rem;
-    transition: opacity 0.2s;
-}
-
-.main-nav a:hover {
-    opacity: 0.8;
 }
 
 .btn-login {
@@ -66,70 +74,74 @@ body {
     font-weight: 600 !important;
 }
 
-/* HERO */
+/* ==========================================
+   3. SECCIÓN HERO
+   ========================================== */
 .hero-section {
     background-color: var(--light-blue-bg);
     display: flex;
-    justify-content: space-between;
+    flex-direction: column-reverse; /* Imagen arriba o abajo según orden de flex */
     align-items: center;
-    padding: 3rem 10%;
-    min-height: 280px;
+    text-align: center;
+    padding: 2rem 5%;
+    gap: 1.5rem;
 }
 
 .hero-text h2 {
-    font-size: 2.2rem;
+    font-size: 1.8rem;
     color: var(--text-dark);
     line-height: 1.2;
-    margin-bottom: 1rem;
+    margin-bottom: 0.8rem;
 }
 
 .hero-text p {
     color: var(--text-muted);
-    max-width: 350px;
-    font-size: 1rem;
+    font-size: 0.95rem;
 }
 
 .hero-image img {
-    width: 180px;
-    height: 180px;
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
 }
 
-/* BARRA DE BÚSQUEDA */
+/* ==========================================
+   4. BARRA DE BÚSQUEDA
+   ========================================== */
 .search-section {
-    padding: 2.5rem 5%;
+    padding: 1.5rem 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .search-form {
     display: flex;
-    gap: 1.5rem;
-    align-items: center;
+    flex-direction: column;
+    gap: 1rem;
 }
 
 .input-group {
-    flex: 1;
     position: relative;
     display: flex;
     align-items: center;
+    width: 100%;
 }
 
 .search-icon {
     position: absolute;
     left: 1.2rem;
     color: var(--text-dark);
-    font-size: 1.2rem;
+    font-size: 1.1rem;
 }
 
 .input-group input {
     width: 100%;
-    padding: 1.2rem 1rem 1.2rem 3.2rem;
+    padding: 1rem 1rem 1rem 3rem;
     background-color: var(--input-bg);
     border: none;
     border-radius: 6px;
-    font-size: 1rem;
+    font-size: 0.95rem;
     outline: none;
 }
 
@@ -137,11 +149,12 @@ body {
     background-color: var(--primary-blue);
     color: var(--white);
     border: none;
-    padding: 1.2rem 3rem;
+    padding: 1rem;
     font-size: 1rem;
     font-weight: bold;
     border-radius: 4px;
     cursor: pointer;
+    width: 100%;
     transition: background 0.3s;
 }
 
@@ -149,22 +162,25 @@ body {
     background-color: #0070d2;
 }
 
-/* TARJETAS ACCESOS RÁPIDOS */
+/* ==========================================
+   5. ACCESOS RÁPIDOS (Flexbox Responsivo)
+   ========================================== */
 .quick-access {
-    display: grid;
-    grid-template-columns: repeat(4, 1fr);
-    gap: 1.5rem;
-    padding: 1rem 5% 3rem 5%;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding: 1rem 5% 2rem 5%;
     max-width: 1200px;
     margin: 0 auto;
 }
 
 .card {
     background-color: var(--card-blue-bg);
-    padding: 2.5rem 1rem;
+    padding: 1.5rem 1rem;
     text-align: center;
     border-radius: 6px;
     cursor: pointer;
+    flex: 1 1 100%; /* Toma 100% en pantallas móviles */
     transition: transform 0.2s, background-color 0.2s;
 }
 
@@ -174,25 +190,27 @@ body {
 }
 
 .card-icon {
-    font-size: 2.5rem;
+    font-size: 2rem;
     color: var(--text-dark);
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .card h3 {
-    font-size: 1rem;
+    font-size: 0.95rem;
     color: var(--text-dark);
     font-weight: 600;
 }
 
-/* BARRA DE BENEFICIOS */
+/* ==========================================
+   6. BARRA DE BENEFICIOS INFERIOR
+   ========================================== */
 .features-bar {
     background-color: var(--light-blue-bg);
     display: flex;
-    justify-content: space-around;
+    flex-direction: column;
+    gap: 1.2rem;
     align-items: center;
-    padding: 2rem 5%;
-    margin-top: 1rem;
+    padding: 1.5rem 5%;
 }
 
 .feature-item {
@@ -201,18 +219,78 @@ body {
     gap: 0.8rem;
     color: var(--text-dark);
     font-weight: 600;
-    font-size: 0.95rem;
+    font-size: 0.9rem;
 }
 
 .feature-item i {
-    font-size: 1.8rem;
+    font-size: 1.5rem;
 }
 
-/* FOOTER */
+/* ==========================================
+   7. FOOTER
+   ========================================== */
 footer {
     text-align: center;
     padding: 1.5rem;
     background-color: var(--white);
     color: var(--text-muted);
     font-size: 0.85rem;
+}
+
+/* ==========================================
+   8. MEDIA QUERIES (PANTALLAS MEDIANAS Y GRANDES)
+   ========================================== */
+
+/* Tablets / Pantallas medianas (>= 768px) */
+@media (min-width: 768px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        gap: 1.5rem;
+    }
+
+    .hero-section {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 3rem 10%;
+    }
+
+    .hero-text h2 {
+        font-size: 2.2rem;
+    }
+
+    .hero-image img {
+        width: 180px;
+        height: 180px;
+    }
+
+    .search-form {
+        flex-direction: row;
+    }
+
+    .btn-search {
+        width: auto;
+        padding: 1rem 2.5rem;
+    }
+
+    .card {
+        flex: 1 1 calc(50% - 1rem); /* 2 tarjetas por fila */
+    }
+
+    .features-bar {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}
+
+/* Pantallas grandes / Escritorio (>= 1024px) */
+@media (min-width: 1024px) {
+    .card {
+        flex: 1 1 calc(25% - 1rem); /* 4 tarjetas por fila */
+    }
 }

@@ -4,136 +4,110 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
     <title>MediClick</title>
-
-    <link rel="stylesheet" href="style.css">
+    <!-- Enlace a tu archivo CSS responsivo -->
+    <link rel="stylesheet" href="styleindex.css">
+    <!-- Iconos de FontAwesome -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-<header>
 
-    <h1>MediClick</h1>
+    <!-- CABECERA PRINCIPAL -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
+        </div>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="#" class="active">Inicio</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Mi Perfil</a></li>
+                <li><a href="#">Directorio Médico</a></li>
+                <li><a href="#">Contacto / Ayuda</a></li>
+                <li><a href="#" class="btn-login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
 
-    <nav>
+    <!-- CONTENIDO PRINCIPAL -->
+    <main>
+        <!-- SECCIÓN HERO -->
+        <section class="hero-section">
+            <article class="hero-text">
+                <h2>Tu salud,<br>nuestra prioridad</h2>
+                <p>Encuentra médicos, reserva tu cita y gestiona tu salud de forma fácil y rápida.</p>
+            </article>
+            <aside class="hero-image">
+                <img src="img/doctor.png" alt="Imagen de un médico">
+            </aside>
+        </section>
 
-        <ul>
+        <!-- SECCIÓN BUSCADOR -->
+        <section class="search-section">
+            <form class="search-form">
+                <div class="input-group">
+                    <i class="fa-solid fa-magnifying-glass search-icon"></i>
+                    <input type="text" id="especialidad" placeholder="Especialidades">
+                </div>
 
-            <li><a href="#">Inicio</a></li>
-            <li><a href="#">Directorio Médico</a></li>
-            <li><a href="#">Mis Reservas</a></li>
-            <li><a href="#">Contacto</a></li>
-            <li><a href="#">Iniciar Sesión</a></li>
-        </ul>
+                <div class="input-group">
+                    <i class="fa-solid fa-location-dot search-icon"></i>
+                    <input type="text" id="ubicacion" placeholder="Ubicación">
+                </div>
 
-    </nav>
+                <button type="submit" class="btn-search">BUSCAR</button>
+            </form>
+        </section>
 
-</header>
+        <!-- SECCIÓN ACCESOS RÁPIDOS -->
+        <section class="quick-access">
+            <article class="card">
+                <i class="fa-regular fa-calendar-check card-icon"></i>
+                <h3>Reservar Cita</h3>
+            </article>
 
-<main>
+            <article class="card">
+                <i class="fa-regular fa-user card-icon"></i>
+                <h3>Directorio Médico</h3>
+            </article>
 
-    <section>
+            <article class="card">
+                <i class="fa-regular fa-folder-open card-icon"></i>
+                <h3>Mis Reservas</h3>
+            </article>
 
-        <article>
+            <article class="card">
+                <i class="fa-solid fa-headset card-icon"></i>
+                <h3>Contacto / Ayuda</h3>
+            </article>
+        </section>
 
-            <h2>Tu salud, nuestra prioridad</h2>
+        <!-- SECCIÓN BENEFICIOS INFERIORES -->
+        <section class="features-bar">
+            <div class="feature-item">
+                <i class="fa-solid fa-shield-halved"></i>
+                <span>Atención Confiable</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-user-check"></i>
+                <span>Médicos Verificados</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-lock"></i>
+                <span>Seguridad en tus datos</span>
+            </div>
+            <div class="feature-item">
+                <i class="fa-solid fa-headset"></i>
+                <span>Ayuda y Soporte 24/7</span>
+            </div>
+        </section>
+    </main>
 
-            <p>
-                Agenda tus citas médicas de forma rápida y sencilla.
-            </p>
-            
-            <button type="button">
-                Reservar cita
-            </button>
-
-        </article>
-
-        <aside>
-
-            <img
-                src="img/doctor.png"
-                alt="Imagen de un medico">
-
-        </aside>
-
-    </section>
-    <section>
-
-    <h2>Buscar cita</h2>
-
-    <form>
-
-        <label for="especialidad">
-            Especialidad
-        </label>
-
-        <input
-            type="text"
-            id="especialidad"
-            placeholder="Especialidad">
-
-        <br><br>
-
-        <label for="ubicacion">
-            Ubicación
-        </label>
-
-        <input
-            type="text"
-            id="ubicacion"
-            placeholder="Ciudad">
-
-        <br><br>
-
-        <button type="submit">
-            Buscar
-        </button>
-
-    </form>
-
-    </section>
-
-    <section>
-
-    <h2>Accesos rápidos</h2>
-
-    <article>
-
-        <h3>Reservar cita</h3>
-
-        <p>Agenda una nueva cita médica.</p>
-
-    </article>
-
-    <article>
-
-        <h3>Directorio Médico</h3>
-
-        <p>Busca especialistas disponibles.</p>
-
-    </article>
-
-    <article>
-
-        <h3>Mis Reservas</h3>
-
-        <p>Consulta tus próximas citas.</p>
-
-    </article>
-
-    </section>
-
-</main>
-
-
+    <!-- PIE DE PÁGINA -->
     <footer>
-
-    <p>
-        © 2026 MediClick - Todos los derechos reservados.
-    </p>
-
+        <p>© 2026 MediClick - Todos los derechos reservados.</p>
     </footer>
 
 </body>
-
 </html>
