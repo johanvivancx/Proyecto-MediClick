@@ -300,3 +300,186 @@ select.form-control {
 .footer-icon {
     font-size: 20px;
 }
+
+/* ==========================================
+   SECCIÓN: DIRECTORIO MÉDICO (Figma Style)
+   ========================================== */
+
+.sub-header {
+    background-color: #FAF8FF;
+    padding: 12px 40px;
+    border-bottom: 1px solid #EAE5F5;
+}
+
+.back-link {
+    text-decoration: none;
+    color: #333;
+    font-weight: 600;
+}
+
+.search-section {
+    margin-top: 20px;
+    margin-bottom: 30px;
+}
+
+.search-bar {
+    display: flex;
+    align-items: center;
+    background-color: #F3EEF9;
+    padding: 12px 20px;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.search-bar input {
+    border: none;
+    background: transparent;
+    width: 100%;
+    margin-left: 10px;
+    font-size: 15px;
+    outline: none;
+}
+
+.filters-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    gap: 15px;
+}
+
+.filter-select {
+    background-color: #F3EEF9;
+    border: none;
+    padding: 14px 18px;
+    border-radius: 8px;
+    color: #4A4A4A;
+    font-weight: 500;
+    cursor: pointer;
+    outline: none;
+}
+
+/* Grid de Médicos */
+.doctors-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+    margin-bottom: 50px;
+}
+
+.doctor-card {
+    background-color: #F7F3FC;
+    padding: 30px 20px;
+    border-radius: 12px;
+    text-align: center;
+    transition: transform 0.2s ease;
+}
+
+.doctor-card:hover {
+    transform: translateY(-3px);
+}
+
+.avatar-container {
+    width: 110px;
+    height: 110px;
+    border-radius: 50%;
+    overflow: hidden;
+    margin: 0 auto 15px auto;
+    background-color: #E2D9F3;
+}
+
+.doctor-avatar {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.doctor-card h3 {
+    margin: 10px 0 5px 0;
+    color: #222;
+    font-size: 18px;
+}
+
+.doctor-card .specialty {
+    color: #555;
+    font-size: 14px;
+    margin: 2px 0;
+}
+
+.doctor-card .location {
+    color: #777;
+    font-size: 13px;
+}
+
+/* Banner Inferior */
+.benefits-banner {
+    background-color: #EBF7FF;
+    display: flex;
+    justify-content: space-around;
+    padding: 25px 40px;
+    margin-top: 40px;
+}
+
+.benefit-item {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    color: #2C3E50;
+    font-size: 14px;
+}
+
+.benefit-icon {
+    font-size: 22px;
+}
+
+/* ==========================================
+   SECCIÓN: NAVBAR GLOBAL Y DIRECTORIO
+   ========================================== */
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 15px 40px;
+    background-color: #ffffff;
+    border-bottom: 1px solid #e0e0e0;
+}
+
+.logo {
+    font-size: 20px;
+    font-weight: bold;
+    color: #0088ff;
+}
+
+.nav-links {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-links a {
+    text-decoration: none;
+    color: #0088ff;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.nav-links a.active {
+    font-weight: bold;
+}
+
+.btn-primary {
+    background-color: #0088ff;
+    color: white;
+    padding: 10px 20px;
+    border-radius: 6px;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
