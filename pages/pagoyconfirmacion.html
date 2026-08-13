@@ -1,5 +1,175 @@
 <!DOCTYPE html>
 <html lang="es">
+johan-vivanco
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Pago y confirmación de citas médicas en MediClick">
+    <meta name="author" content="Johan Jair Oña Vivanco">
+    <title>Pago y Confirmación | MediClick</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+
+    <!-- NAVBAR SUPERIOR -->
+    <header class="top-nav">
+        <div class="logo">MEDICLICK</div>
+        <nav>
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="#">Reservas</a></li>
+                <li><a href="#">Mi Perfil</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="#">Contacto / Ayuda</a></li>
+            </ul>
+        </nav>
+        <button class="btn-login">👤 Iniciar Sesión</button>
+    </header>
+
+    <!-- BARRA SUB-HEADER -->
+    <div class="sub-header">
+        <button class="btn-back">←</button>
+        <h2>Pago y Confirmación</h2>
+    </div>
+
+    <!-- CONTENEDOR PRINCIPAL (DOS COLUMNAS) -->
+    <main class="checkout-container">
+        
+        <!-- COLUMNA IZQUIERDA: INFORMACIÓN DE PAGO -->
+        <div class="left-column">
+            
+            <h2 class="column-title">Información de Pago</h2>
+
+            <!-- Tarjeta Blanco Estilo UI Kit -->
+            <div class="card-box-white">
+                
+                <!-- Banner Pago Seguro -->
+                <div class="secure-pay-banner">
+                    <span class="lock-icon">🔒</span>
+                    <p><strong>Pago Seguro:</strong> Tus transacciones están cifradas con encriptación de grado médico.</p>
+                </div>
+
+                <!-- Método de Pago (Select) -->
+                <div class="form-group">
+                    <label for="metodo-pago" class="form-label">Método de pago</label>
+                    <select id="metodo-pago" class="form-control">
+                        <option value="transferencia" selected>Transferencia</option>
+                        <option value="tarjeta_debito">Tarjeta de Débito</option>
+                        <option value="tarjeta_credito">Tarjeta de Crédito</option>
+                    </select>
+                </div>
+
+                <!-- Número de Tarjeta -->
+                <div class="form-group">
+                    <label for="numero-tarjeta" class="form-label">Número de tarjeta</label>
+                    <input type="text" id="numero-tarjeta" class="form-control" placeholder="1234 5678 9012 3456">
+                </div>
+
+                <!-- Nombre del Titular -->
+                <div class="form-group">
+                    <label for="nombre-titular" class="form-label">Nombre del titular</label>
+                    <input type="text" id="nombre-titular" class="form-control" placeholder="Nombre completo">
+                </div>
+
+                <!-- Fecha de Expiración -->
+                <div class="form-group">
+                    <label for="fecha-expiracion" class="form-label">Fecha de expiración</label>
+                    <div class="input-icon-wrapper">
+                        <input type="text" id="fecha-expiracion" class="form-control" placeholder="-------- de ----">
+                        <span class="field-icon">📅</span>
+                    </div>
+                </div>
+
+                <!-- Código CVV -->
+                <div class="form-group">
+                    <label for="codigo-cvv" class="form-label">Código CVV</label>
+                    <input type="text" id="codigo-cvv" class="form-control" placeholder="123">
+                </div>
+
+                <!-- Botón de Confirmación -->
+                <button class="btn-confirm-pay mt-20">Confirmar Pago</button>
+
+            </div>
+
+        </div>
+
+        <!-- COLUMNA DERECHA: RESUMEN DE CITA -->
+        <div class="right-column">
+            
+            <!-- Tarjeta: Información del Especialista -->
+            <div class="card-box-white">
+                <p class="section-label">Información del Especialista</p>
+                <div class="specialist-details">
+                    <img src="../img/doctor.png" alt="Doctor Especialista" class="doctor-avatar">
+                    <div class="doctor-info">
+                        <h3>Dr. Alex Martinez</h3>
+                        <p class="specialty">Cardiología</p>
+                        <p class="hospital">Hospital Metropolitano</p>
+                        <p class="extra-info">Consulta médica general y seguimiento del paciente.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Información de Horarios -->
+            <div class="card-box-white">
+                <p class="section-label">Información de Horarios</p>
+                <div class="schedule-details">
+                    <div class="schedule-item">
+                        <span>📅</span>
+                        <p><strong>Fecha:</strong> 24 de junio, 2026</p>
+                    </div>
+                    <div class="schedule-item">
+                        <span>📍</span>
+                        <p>Hospital Metropolitano de Quito</p>
+                    </div>
+                    <div class="schedule-item">
+                        <span>⏰</span>
+                        <p><strong>Hora:</strong> 10:00 a. m.</p>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Tarjeta: Valor y Confirmación -->
+            <div class="card-box-white">
+                <p class="section-label">Valor de Pago</p>
+                <div class="price-row">
+                    <span>Consulta médica</span>
+                    <span class="price-tag">$50.00</span>
+                </div>
+            </div>
+
+        </div>
+
+    </main>
+
+    <!-- FOOTER INFORMATIVO -->
+    <footer class="benefits-footer">
+        <div class="benefit-item">
+            <span class="footer-icon">🛡️</span>
+            <div>
+                <strong>Atención Confiable</strong>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <span class="footer-icon">👤</span>
+            <div>
+                <strong>Médicos Verificados</strong>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <span class="footer-icon">🔒</span>
+            <div>
+                <strong>Seguridad en tus datos</strong>
+            </div>
+        </div>
+        <div class="benefit-item">
+            <span class="footer-icon">🎧</span>
+            <div>
+                <strong>Ayuda y Soporte 24/7</strong>
+            </div>
+        </div>
+    </footer>
+
 
 <head>
 
