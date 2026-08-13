@@ -1,0 +1,182 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MediClick - Reservas</title>
+</head>
+<body>
+
+    
+    <header>
+        <h1>MediClick</h1>
+        <nav aria-label="Navegación principal">
+            <ul>
+                <li><a href="index.html">Inicio</a></li>
+                <li><a href="reservas.html" aria-current="page">Reservas</a></li>
+                <li><a href="mi-perfil-elian.html">Mi Perfil</a></li>
+                <li><a href="directorio.html">Directorio Médico</a></li>
+                <li><a href="contacto.html">Contacto / Ayuda</a></li>
+                <li><a href="iniciar-sesion.html">Iniciar Sesión</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    
+    <main>
+        
+        <section aria-labelledby="titulo-reserva">
+            <h2 id="titulo-reserva">Reservar una Cita</h2>
+            <ol aria-label="Pasos de reserva de cita">
+                <li aria-current="step">Especialista</li>
+                <li>Horario</li>
+                <li>Pagos</li>
+                <li>Confirmación</li>
+            </ol>
+        </section>
+
+        
+        <section aria-labelledby="titulo-filtros">
+            <h3 id="titulo-filtros">Filtrar Especialistas</h3>
+            <form action="#" method="get">
+                <div>
+                    <label for="especialidad">Especialidad:</label>
+                    <select id="especialidad" name="especialidad">
+                        <option value="">Especialidad</option>
+                        <option value="cardiologia">Cardiología</option>
+                        <option value="medicina-general">Medicina General</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="ubicacion">Ubicación:</label>
+                    <select id="ubicacion" name="ubicacion">
+                        <option value="">Ubicación</option>
+                        <option value="hospital-metropolitano">Hospital Metropolitano</option>
+                    </select>
+                </div>
+
+                <div>
+                    <label for="tipo-atencion">Tipo de Atención:</label>
+                    <select id="tipo-atencion" name="tipo-atencion">
+                        <option value="">Tipo de Atención</option>
+                        <option value="presencial">Presencial</option>
+                        <option value="virtual">Virtual</option>
+                    </select>
+                </div>
+
+                <button type="submit">Filtrar</button>
+            </form>
+            <button type="button">Ver más Especialistas</button>
+        </section>
+
+        
+        <section aria-labelledby="titulo-lista-medicos">
+            <h3 id="titulo-lista-medicos">Lista de Especialistas Disponibles</h3>
+
+            
+            <article>
+                <figure>
+                    <img src="../img/dra-ana-martinez.png" alt="Foto de perfil de la Dra. Ana Martínez">
+                </figure>
+                <h4>Dra. Ana Martínez</h4>
+                <p>Cardiología</p>
+                <p>Hospital Metropolitano</p>
+                <p>Calificación: 5 de 5 estrellas</p>
+            </article>
+
+            
+            <article>
+                <figure>
+                    <img src="../img/dr-juan-perez-1.png" alt="Foto de perfil del Dr. Juan Pérez">
+                </figure>
+                <h4>Dr. Juan Pérez</h4>
+                <p>Medicina General</p>
+                <p>Hospital Metropolitano</p>
+                <p>Calificación: 5 de 5 estrellas</p>
+            </article>
+
+            
+            <article>
+                <figure>
+                    <img src="../img/dr-juan-perez-2.png" alt="Foto de perfil del Dr. Juan Pérez alternativa">
+                </figure>
+                <h4>Dr. Juan Pérez</h4>
+                <p>Medicina General</p>
+                <p>Hospital Metropolitano</p>
+                <p>Calificación: 5 de 5 estrellas</p>
+            </article>
+        </section>
+
+       
+        <section aria-labelledby="titulo-detalle-especialista">
+            <h3 id="titulo-detalle-especialista">Información del Especialista</h3>
+            <figure>
+                <img src="../img/dra-ana-martinez-detalle.png" alt="Dra. Ana Martínez detalle">
+            </figure>
+            <h4>Dra. Ana Martínez</h4>
+            <p>Cardiología</p>
+            <p>Hospital Metropolitano</p>
+            <p>Información del Especialista...</p>
+            <p>Review: 8 Años de Experiencia</p>
+        </section>
+
+        
+        <section aria-labelledby="titulo-calendario">
+            <h3 id="titulo-calendario">Calendario y Horarios</h3>
+            
+            <div>
+                <h4>Calendario</h4>
+                
+                <time datetime="2026-06">Junio 2026</time>
+                
+            </div>
+
+            <div>
+                <h4>Horarios Disponibles</h4>
+                <ul>
+                    <li><button type="button">08:00 a.m.</button></li>
+                    <li><button type="button">09:00 a.m.</button></li>
+                    <li><button type="button">10:00 a.m.</button></li>
+                    <li><button type="button">11:00 a.m.</button></li>
+                    <li><button type="button">12:00 p.m.</button></li>
+                    <li><button type="button">03:00 p.m.</button></li>
+                </ul>
+            </div>
+
+            <button type="button">Proceder al Pago</button>
+        </section>
+
+        
+        <section aria-labelledby="titulo-garantias">
+            <h3 id="titulo-garantias" hidden>Información y Garantías</h3>
+            
+            <article>
+                <h4>Atencion Confiable</h4>
+                <p>Servicio médico de calidad garantizado.</p>
+            </article>
+
+            <article>
+                <h4>Medicos Verificados</h4>
+                <p>Profesionales de la salud certificados.</p>
+            </article>
+
+            <article>
+                <h4>Seguridad en tus datos</h4>
+                <p>Protección total de tu información personal.</p>
+            </article>
+
+            <article>
+                <h4>Ayuda y Soporte 24/7</h4>
+                <p>Asistencia disponible en todo momento.</p>
+            </article>
+        </section>
+    </main>
+
+    
+    <footer>
+        <p>&copy; 2026 MediClick - Todos los derechos reservados.</p>
+    </footer>
+
+</body>
+</html>
