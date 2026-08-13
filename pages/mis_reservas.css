@@ -1,0 +1,21 @@
+
+:root {
+    --azul: #168be8;
+    --azul-claro: #e1f3ff;
+    --morado-claro: #f3edf7;
+    --verde: #2dcc67;
+    --gris: #d1ccd3;
+    --texto: #222;
+}
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    color: var(--texto);
+    background-color: white;
+}
