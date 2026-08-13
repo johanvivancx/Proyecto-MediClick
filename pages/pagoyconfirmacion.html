@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="es">
+johan-vivanco
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -169,5 +170,204 @@
         </div>
     </footer>
 
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta name="description" content="Pago y confirmación de citas médicas en MediClick">
+
+    <meta name="author" content="Johan Jair Oña Vivanco">
+
+    <title>Pago y Confirmación | MediClick</title>
+
+    <link rel="stylesheet" href="../style.css">
+
+</head>
+
+<body>
+
+<header>
+
+    <h1>MediClick</h1>
+
+    <nav>
+
+        <ul>
+
+            <li><a href="../index.html">Inicio</a></li>
+
+            <li><a href="directoriomedico.html">Directorio Médico</a></li>
+
+            <li><a href="#">Mis Reservas</a></li>
+
+            <li><a href="#">Contacto</a></li>
+
+            <li><a href="#">Iniciar Sesión</a></li>
+
+        </ul>
+
+    </nav>
+
+</header>
+
+<main>
+
+    <section>
+
+        <article>
+
+            <h2>Pago y Confirmación</h2>
+
+            <p>
+
+                Complete los datos de pago para confirmar su cita médica.
+
+            </p>
+
+        </article>
+
+        <aside>
+
+            <img src="../img/pago.png"
+                 alt="Proceso de pago de una cita médica">
+
+        </aside>
+
+    </section>
+
+    <section>
+
+        <h2>Información de Pago</h2>
+
+        <form>
+
+            <label for="metodo">
+                Método de pago
+            </label>
+
+            <select id="metodo">
+
+                <option>Transferencia</option>
+
+                <option>Tarjeta de Crédito</option>
+
+                <option>Tarjeta de Débito</option>
+
+            </select>
+
+            <br><br>
+
+            <label for="numero">
+                Número de tarjeta
+            </label>
+
+            <input
+                type="text"
+                id="numero"
+                placeholder="1234 5678 9012 3456">
+
+            <br><br>
+
+            <label for="titular">
+                Nombre del titular
+            </label>
+
+            <input
+                type="text"
+                id="titular"
+                placeholder="Nombre completo">
+
+            <br><br>
+
+            <label for="fecha">
+                Fecha de expiración
+            </label>
+
+            <input
+                type="month"
+                id="fecha">
+
+            <br><br>
+
+            <label for="cvv">
+                Código CVV
+            </label>
+
+            <input
+                type="password"
+                id="cvv"
+                placeholder="123">
+
+            <br><br>
+
+            <button type="submit">
+
+                Confirmar Pago
+
+            </button>
+
+        </form>
+
+    </section>
+
+    <section>
+
+        <h2>Resumen de la Reserva</h2>
+
+        <article>
+
+            <h3>Especialista</h3>
+
+            <p>Dra. Sofía López</p>
+
+        </article>
+
+        <article>
+
+            <h3>Especialidad</h3>
+
+            <p>Cardiología</p>
+
+        </article>
+
+        <article>
+
+            <h3>Fecha</h3>
+
+            <p>08 de agosto de 2026</p>
+
+        </article>
+
+        <article>
+
+            <h3>Hora</h3>
+
+            <p>09:00 AM</p>
+
+        </article>
+
+        <article>
+
+            <h3>Valor</h3>
+
+            <p>$50.00</p>
+
+        </article>
+
+    </section>
+
+</main>
+
+<footer>
+
+    <p>
+
+        © 2026 MediClick - Todos los derechos reservados.
+
+    </p>
+</footer>
 </body>
 </html>
