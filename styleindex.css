@@ -1,6 +1,3 @@
-/* ==========================================
-   1. VARIABLES Y RESET (Mobile First)
-   ========================================== */
 :root {
     --primary-blue: #0088ff;
     --light-blue-bg: #eaf3ff;
@@ -29,9 +26,6 @@ img {
     height: auto;
 }
 
-/* ==========================================
-   2. HEADER / NAVEGACIÓN (Celular)
-   ========================================== */
 .main-header {
     display: flex;
     flex-direction: column;
@@ -74,13 +68,10 @@ img {
     font-weight: 600 !important;
 }
 
-/* ==========================================
-   3. SECCIÓN HERO
-   ========================================== */
 .hero-section {
     background-color: var(--light-blue-bg);
     display: flex;
-    flex-direction: column-reverse; /* Imagen arriba o abajo según orden de flex */
+    flex-direction: column-reverse;
     align-items: center;
     text-align: center;
     padding: 2rem 5%;
@@ -106,9 +97,6 @@ img {
     object-fit: cover;
 }
 
-/* ==========================================
-   4. BARRA DE BÚSQUEDA
-   ========================================== */
 .search-section {
     padding: 1.5rem 5%;
     max-width: 1200px;
@@ -162,9 +150,6 @@ img {
     background-color: #0070d2;
 }
 
-/* ==========================================
-   5. ACCESOS RÁPIDOS (Flexbox Responsivo)
-   ========================================== */
 .quick-access {
     display: flex;
     flex-wrap: wrap;
@@ -180,7 +165,7 @@ img {
     text-align: center;
     border-radius: 6px;
     cursor: pointer;
-    flex: 1 1 100%; /* Toma 100% en pantallas móviles */
+    flex: 1 1 100%;
     transition: transform 0.2s, background-color 0.2s;
 }
 
@@ -201,9 +186,6 @@ img {
     font-weight: 600;
 }
 
-/* ==========================================
-   6. BARRA DE BENEFICIOS INFERIOR
-   ========================================== */
 .features-bar {
     background-color: var(--light-blue-bg);
     display: flex;
@@ -226,9 +208,6 @@ img {
     font-size: 1.5rem;
 }
 
-/* ==========================================
-   7. FOOTER
-   ========================================== */
 footer {
     text-align: center;
     padding: 1.5rem;
@@ -237,11 +216,6 @@ footer {
     font-size: 0.85rem;
 }
 
-/* ==========================================
-   8. MEDIA QUERIES (PANTALLAS MEDIANAS Y GRANDES)
-   ========================================== */
-
-/* Tablets / Pantallas medianas (>= 768px) */
 @media (min-width: 768px) {
     .main-header {
         flex-direction: row;
@@ -279,7 +253,7 @@ footer {
     }
 
     .card {
-        flex: 1 1 calc(50% - 1rem); /* 2 tarjetas por fila */
+        flex: 1 1 calc(50% - 1rem);
     }
 
     .features-bar {
@@ -288,9 +262,8 @@ footer {
     }
 }
 
-/* Pantallas grandes / Escritorio (>= 1024px) */
 @media (min-width: 1024px) {
     .card {
-        flex: 1 1 calc(25% - 1rem); /* 4 tarjetas por fila */
+        flex: 1 1 calc(25% - 1rem);
     }
 }
