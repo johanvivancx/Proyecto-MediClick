@@ -94,3 +94,128 @@ body {
     font-size: 22px;
     cursor: pointer;
 }
+
+
+
+
+
+
+.contenido {
+    width: 82%;
+    margin: 25px auto;
+}
+
+
+
+
+.tabla-reservas {
+    width: 100%;
+    border-collapse: collapse;
+    background-color: var(--morado-claro);
+}
+
+.tabla-reservas th {
+    padding: 16px;
+    font-size: 12px;
+    font-weight: normal;
+    border-bottom: 2px solid #333;
+}
+
+.tabla-reservas td {
+    padding: 15px;
+    text-align: center;
+    border-bottom: 2px solid #333;
+}
+
+.tabla-reservas tr:last-child td {
+    border-bottom: none;
+}
+
+
+
+
+.fecha {
+    width: 70px;
+    margin: auto;
+    padding: 8px;
+    background-color: var(--gris);
+    font-size: 10px;
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+}
+
+.fecha span {
+    font-size: 15px;
+    font-weight: bold;
+    margin: 3px 0;
+}
+
+
+
+
+.especialidad {
+    font-size: 16px;
+}
+
+
+
+
+.detalle p {
+    margin: 2px 0;
+}
+
+.detalle p:first-child {
+    font-size: 16px;
+}
+
+.detalle p:nth-child(2) {
+    font-size: 16px;
+}
+
+.consultorio {
+    color: #999;
+}
+
+
+
+
+.confirmada {
+    display: inline-block;
+    background-color: var(--verde);
+    padding: 10px 35px;
+    border-radius: 20px;
+    font-size: 12px;
+}
+
+.confirmada:hover {
+    background-color: #25b959;
+}
+
+
+
+
+.footer {
+    margin-top: 20px;
+    background-color: var(--azul-claro);
+    padding: 28px;
+}
+
+.footer-contenido {
+    display: flex;
+    justify-content: space-around;
+}
+
+.footer-contenido div {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.footer-contenido span {
+    font-size: 24px;
+}
+
+.footer-contenido p {
+    font-size: 12px;
+}
