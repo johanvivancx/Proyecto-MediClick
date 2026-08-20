@@ -1,0 +1,278 @@
+/* RESET Y VARIABLES GENERALES */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+body {
+    background-color: #f4f7f6;
+    color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+/* HEADER Y NAVEGACIÓN (Mobile First) */
+header {
+    background-color: #ffffff;
+    padding: 15px 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 15px;
+    border-bottom: 1px solid #e2e8f0;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.02);
+}
+
+header > div a {
+    font-size: 22px;
+    font-weight: 800;
+    color: #0088ff;
+    text-decoration: none;
+    letter-spacing: 0.5px;
+}
+
+header nav ul {
+    list-style: none;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #4a5568;
+    font-size: 14px;
+    font-weight: 500;
+    transition: color 0.2s;
+}
+
+header nav a:hover {
+    color: #0088ff;
+}
+
+header nav ul li:last-child a {
+    background-color: #0088ff;
+    color: #ffffff;
+    padding: 8px 16px;
+    border-radius: 6px;
+    font-weight: 600;
+    display: inline-block;
+}
+
+/* MAIN Y CONTENEDOR PRINCIPAL */
+main {
+    flex: 1;
+    max-width: 1100px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 30px;
+}
+
+/* SECCIÓN 1: BANNER / BIENVENIDA */
+main > section:first-of-type {
+    background-color: #ebf8ff;
+    border-radius: 12px;
+    padding: 25px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 20px;
+}
+
+main > section:first-of-type h1 {
+    font-size: 28px;
+    color: #0088ff;
+    margin-bottom: 8px;
+}
+
+main > section:first-of-type p {
+    color: #4a5568;
+    font-size: 14px;
+    line-height: 1.5;
+    margin-bottom: 6px;
+}
+
+main > section:first-of-type figure {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+main > section:first-of-type figure img {
+    max-width: 180px;
+    height: auto;
+    border-radius: 8px;
+    margin-bottom: 8px;
+}
+
+main > section:first-of-type figcaption {
+    font-size: 12px;
+    color: #718096;
+    font-style: italic;
+}
+
+/* SECCIÓN 2: FORMULARIO DE REGISTRO */
+main > section:nth-of-type(2) > div {
+    background-color: #ffffff;
+    padding: 25px;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.04);
+}
+
+main > section:nth-of-type(2) h2 {
+    font-size: 22px;
+    color: #2d3748;
+    margin-bottom: 6px;
+}
+
+main > section:nth-of-type(2) > div > p {
+    font-size: 14px;
+    color: #718096;
+    margin-bottom: 20px;
+}
+
+/* ASIDE: BARRA DE PROGRESO */
+main > section:nth-of-type(2) aside {
+    margin-bottom: 25px;
+}
+
+main > section:nth-of-type(2) aside ul {
+    list-style: none;
+    display: flex;
+    gap: 15px;
+    border-bottom: 2px solid #edf2f7;
+    padding-bottom: 10px;
+}
+
+main > section:nth-of-type(2) aside li {
+    font-size: 13px;
+    font-weight: 600;
+    color: #a0aec0;
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+
+main > section:nth-of-type(2) aside li:first-child {
+    color: #0088ff;
+}
+
+/* FORMULARIO Y CAMPOS */
+form {
+    display: flex;
+    flex-direction: column;
+    gap: 16px;
+}
+
+form > div {
+    display: flex;
+    flex-direction: column;
+    gap: 6px;
+}
+
+form label {
+    font-size: 13px;
+    font-weight: 600;
+    color: #2d3748;
+}
+
+form input {
+    width: 100%;
+    padding: 12px;
+    border: 1px solid #cbd5e0;
+    border-radius: 6px;
+    font-size: 14px;
+    outline: none;
+    transition: border-color 0.2s, box-shadow 0.2s;
+}
+
+form input:focus {
+    border-color: #0088ff;
+    box-shadow: 0 0 0 3px rgba(0, 136, 255, 0.15);
+}
+
+/* BOTÓN DE ENVÍO */
+form button[type="submit"] {
+    width: 100%;
+    background-color: #0088ff;
+    color: #ffffff;
+    border: none;
+    padding: 14px;
+    border-radius: 6px;
+    font-size: 15px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    margin-top: 10px;
+}
+
+form button[type="submit"]:hover {
+    background-color: #0066cc;
+}
+
+/* FOOTER DEL FORMULARIO */
+main > section:nth-of-type(2) footer {
+    margin-top: 20px;
+    text-align: center;
+    font-size: 13px;
+    color: #718096;
+}
+
+main > section:nth-of-type(2) footer a {
+    color: #0088ff;
+    text-decoration: none;
+    font-weight: 600;
+}
+
+main > section:nth-of-type(2) footer a:hover {
+    text-decoration: underline;
+}
+
+/* MEDIA QUERIES (ESCRITORIO / PANTALLAS GRANDES) */
+@media (min-width: 850px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 15px 40px;
+    }
+
+    header nav ul {
+        flex-direction: row;
+        gap: 20px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr;
+        align-items: start;
+        padding-top: 40px;
+    }
+
+    main > section:first-of-type {
+        text-align: left;
+        align-items: flex-start;
+        padding: 40px;
+    }
+
+    /* Formulario en cuadrícula de 2 columnas para campos dobles */
+    form {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 16px;
+    }
+
+    /* Campos que ocupan todo el ancho */
+    form > div:nth-child(3),
+    form > div:nth-child(4),
+    form > div:last-child {
+        grid-column: span 2;
+    }
+}

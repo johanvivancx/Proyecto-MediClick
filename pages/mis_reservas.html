@@ -3,127 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Pantalla Mis Reservas Nicolas</title>
+    <title>Mis Reservas | MediClick</title>
+    <link rel="stylesheet" href="../css_mis_reservas.css">
 </head>
 <body>
 
-    <div>
-        <div>
-            <span>Pantalla Mis Reservas Nicolas</span>
+    <!-- CABECERA -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
         </div>
-        <div>
-            <span>www.mediclick/inicio.com</span>
-        </div>
-        <div>
-            <div>
-                <img src="" alt="Perfil">
-            </div>
-        </div>
-    </div>
-
-    <header>
-        <div>
-            MEDICLICK
-        </div>
-        <nav>
-            <a href="#">Inicio</a>
-            <a href="#">Reservas</a>
-            <a href="#">Mi Perfil</a>
-            <a href="#">Directorio Medico</a>
-            <a href="#">Contacto / Ayuda</a>
+        <nav class="main-nav">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="mis_reservas.html" class="active">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html">Contacto</a></li>
+                <li><a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a></li>
+            </ul>
         </nav>
-        <div>
-            <a href="#">Iniciar Sesión</a>
-        </div>
     </header>
 
-    <div>
-        <button>
-            <span>&larr;</span>
-        </button>
-        <h1>Mis Reservas</h1>
-    </div>
+    <!-- CONTENEDOR PRINCIPAL -->
+    <main class="reservas-container">
+        <div class="page-title-row">
+            <a href="../index.html" class="btn-back">←</a>
+            <h2>Mis Reservas</h2>
+        </div>
 
-    <main>
-        <table>
-            <thead>
-                <tr>
-                    <th>Fecha</th>
-                    <th>Especialidad</th>
-                    <th>Detalle</th>
-                    <th>Estado</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr>
-                    <td>
-                        <div>
-                            Mañana<br><span>22</span><br>MAY
-                        </div>
-                    </td>
-                    <td>DENTISTA</td>
-                    <td>
-                        <p>7pm</p>
-                        <p>Dr. Felipe Campos</p>
-                        <p>Consultorio 101</p>
-                    </td>
-                    <td>
-                        <span>Confirmada</span>
-                    </td>
-                </tr>
+        <div class="reservas-header-row">
+            <span>FECHA</span>
+            <span>ESPECIALIDAD</span>
+            <span>DETALLE</span>
+            <span>ESTADO</span>
+        </div>
 
-                <tr>
-                    <td>
-                        <div>
-                            Jueves<br><span>23</span><br>MAY
-                        </div>
-                    </td>
-                    <td>CARDIOLOGO</td>
-                    <td>
-                        <p>7pm</p>
-                        <p>Dr. Elian Valenzuela</p>
-                        <p>Consultorio 203</p>
-                    </td>
-                    <td>
-                        <span>Confirmada</span>
-                    </td>
-                </tr>
+        <div class="reservas-list">
+            <!-- RESERVA 1 -->
+            <article class="reserva-card">
+                <div class="date-badge">
+                    <span class="day-name">Mañana</span>
+                    <span class="day-number">22</span>
+                    <span class="month-name">MAY</span>
+                </div>
+                <div class="specialty-title">DENTISTA</div>
+                <div class="doctor-detail">
+                    <p class="time">7pm</p>
+                    <p class="doctor-name">Dr. Felipe Campos</p>
+                    <p class="room">Consultorio 101</p>
+                </div>
+                <div class="status-wrapper">
+                    <span class="status-badge">Confirmada</span>
+                </div>
+            </article>
 
-                <tr>
-                    <td>
-                        <div>
-                            Sabado<br><span>22</span><br>MAY
-                        </div>
-                    </td>
-                    <td>PEDIATRA</td>
-                    <td>
-                        <p>7pm</p>
-                        <p>Dr. Andrés Silva</p>
-                        <p>Consultorio 156</p>
-                    </td>
-                    <td>
-                        <span>Confirmada</span>
-                    </td>
-                </tr>
-            </tbody>
-        </table>
+            <!-- RESERVA 2 -->
+            <article class="reserva-card">
+                <div class="date-badge">
+                    <span class="day-name">Jueves</span>
+                    <span class="day-number">23</span>
+                    <span class="month-name">MAY</span>
+                </div>
+                <div class="specialty-title">CARDIÓLOGO</div>
+                <div class="doctor-detail">
+                    <p class="time">7pm</p>
+                    <p class="doctor-name">Dr. Elian Valenzuela</p>
+                    <p class="room">Consultorio 203</p>
+                </div>
+                <div class="status-wrapper">
+                    <span class="status-badge">Confirmada</span>
+                </div>
+            </article>
+        </div>
     </main>
 
+    <!-- BARRA DE BENEFICIOS -->
+    <section class="features-bar">
+        <div class="feature-item">Atención Confiable</div>
+        <div class="feature-item">Médicos Verificados</div>
+        <div class="feature-item">Seguridad en tus datos</div>
+        <div class="feature-item">Ayuda y Soporte 24/7</div>
+    </section>
+
     <footer>
-        <div>
-            <div>
-                <span>Atencion Confianble</span>
-            </div>
-            <div>
-                <span>Medicos Verificados</span>
-            </div>
-            <div>
-                <span>Seguridad en tus datos</span>
-            </div>
-            <div>
-                <span>Ayuda y Soporte 24/7</span>
-            </div>
-        </div>
+        <p>© 2026 MediClick - Todos los derechos reservados.</p>
     </footer>
 
 </body>

@@ -1,3 +1,6 @@
+/* ==========================================
+   RESET Y ESTILOS GENERALES
+   ========================================== */
 * {
     margin: 0;
     padding: 0;
@@ -8,28 +11,36 @@
 body {
     background-color: #ffffff;
     color: #333333;
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
 }
 
+/* ==========================================
+   HEADER Y NAVEGACIÓN (Mobile First)
+   ========================================== */
 header {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 20px 60px;
+    gap: 15px;
+    padding: 20px 30px;
     background-color: #ffffff;
     border-bottom: 1px solid #e5e5e5;
 }
 
 header h1 {
     color: #0088ff;
-    font-size: 18px;
+    font-size: 22px;
     font-weight: bold;
 }
 
 nav ul {
     display: flex;
-    list-style: none;
-    gap: 30px;
+    flex-direction: column;
     align-items: center;
+    list-style: none;
+    gap: 12px;
 }
 
 nav a {
@@ -41,16 +52,34 @@ nav a {
 nav ul li:last-child a {
     background-color: #0088ff;
     color: white;
-    padding: 10px 22px;
+    padding: 8px 18px;
     border-radius: 4px;
     font-weight: bold;
 }
 
+/* ==========================================
+   MAIN Y ESTRUCTURA GENERAL
+   ========================================== */
+main {
+    flex: 1;
+    max-width: 1280px;
+    width: 100%;
+    margin: 0 auto;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+}
+
+/* ==========================================
+   SECCIÓN 1: PASOS DE RESERVA
+   ========================================== */
 main > section:first-of-type {
     display: flex;
-    justify-content: space-between;
+    flex-direction: column;
     align-items: center;
-    padding: 30px 80px;
+    gap: 15px;
+    padding: 20px;
     border-bottom: 1px solid #e5e5e5;
 }
 
@@ -60,16 +89,16 @@ main > section:first-of-type h2 {
 
 main > section:first-of-type ol {
     display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
     list-style: none;
-    gap: 50px;
-    position: relative;
+    gap: 20px;
 }
 
 main > section:first-of-type ol li {
     font-size: 13px;
     font-weight: bold;
     text-align: center;
-    position: relative;
 }
 
 main > section:first-of-type ol li::before {
@@ -90,165 +119,123 @@ main > section:first-of-type ol li:nth-child(2)::before { content: "2"; }
 main > section:first-of-type ol li:nth-child(3)::before { content: "3"; }
 main > section:first-of-type ol li:nth-child(4)::before { content: "4"; }
 
-main {
-    max-width: 1280px;
-    margin: 0 auto;
-    padding: 20px;
-}
-
-main > section:nth-of-type(2) {
-    display: inline-block;
-    width: 23%;
-    vertical-align: top;
-    padding-right: 15px;
-}
-
+/* ==========================================
+   SECCIÓN 2: FILTROS DE BÚSQUEDA
+   ========================================== */
 main > section:nth-of-type(2) h3 {
-    display: none; 
+    margin-bottom: 10px;
+}
+
+main > section:nth-of-type(2) form {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+main > section:nth-of-type(2) select,
+main > section:nth-of-type(2) button {
+    width: 100%;
+    padding: 12px;
+    border-radius: 6px;
+    font-size: 14px;
 }
 
 main > section:nth-of-type(2) select {
-    width: 100%;
-    padding: 12px 15px;
-    margin-bottom: 15px;
     background-color: #f0edfb;
     border: none;
-    border-radius: 6px;
-    font-size: 14px;
     color: #444;
 }
 
-main > section:nth-of-type(2) button[type="submit"] {
-    width: 100%;
-    padding: 12px;
+main > section:nth-of-type(2) button {
     background-color: #0088ff;
     color: white;
     border: none;
-    border-radius: 6px;
     font-weight: bold;
     cursor: pointer;
-    margin-bottom: 15px;
+    margin-top: 5px;
 }
 
-main > section:nth-of-type(2) button[type="button"] {
-    width: 100%;
-    padding: 12px;
-    background-color: #0088ff;
-    color: white;
-    border: none;
-    border-radius: 6px;
-    font-weight: bold;
-    cursor: pointer;
-}
-
+/* ==========================================
+   SECCIÓN 3: LISTA DE ESPECIALISTAS (CORREGIDO)
+   ========================================== */
 main > section:nth-of-type(3) {
-    display: inline-block;
-    width: 32%;
-    vertical-align: top;
-    padding: 0 10px;
-}
-
-main > section:nth-of-type(3) h3 {
-    display: none;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
 main > section:nth-of-type(3) article {
     background-color: #eeeeee;
     padding: 15px;
     border-radius: 8px;
-    margin-bottom: 15px;
     display: flex;
-    align-items: center;
-    gap: 15px;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+main > section:nth-of-type(3) article figure {
+    width: 65px;
+    height: 65px;
+    flex-shrink: 0;
+    overflow: hidden;
 }
 
 main > section:nth-of-type(3) article figure img {
-    width: 65px;
-    height: 65px;
+    width: 100%;
+    height: 100%;
     border-radius: 50%;
     object-fit: cover;
 }
 
 main > section:nth-of-type(3) article h4 {
     font-size: 15px;
-    margin-bottom: 4px;
 }
 
 main > section:nth-of-type(3) article p {
     font-size: 13px;
     color: #555;
-    margin-bottom: 2px;
 }
 
+/* ==========================================
+   SECCIONES 4 Y 5: DETALLE Y CALENDARIO
+   ========================================== */
 main > section:nth-of-type(4),
 main > section:nth-of-type(5) {
-    display: inline-block;
-    width: 42%;
-    vertical-align: top;
-}
-
-main > section:nth-of-type(4) {
     background-color: #eeeeee;
     padding: 20px;
     border-radius: 8px;
-    margin-bottom: 15px;
-}
-
-main > section:nth-of-type(4) h3 {
-    font-size: 15px;
-    margin-bottom: 15px;
 }
 
 main > section:nth-of-type(4) figure img {
     width: 80px;
     height: 80px;
     border-radius: 50%;
-    float: left;
-    margin-right: 15px;
-}
-
-main > section:nth-of-type(4) h4 {
-    font-size: 16px;
-}
-
-main > section:nth-of-type(4) p {
-    font-size: 13px;
-    color: #444;
-    margin-top: 4px;
-}
-
-main > section:nth-of-type(5) {
-    background-color: #eeeeee;
-    padding: 20px;
-    border-radius: 8px;
-}
-
-main > section:nth-of-type(5) h3 {
-    display: none;
+    margin-bottom: 10px;
 }
 
 main > section:nth-of-type(5) > div {
-    display: inline-block;
-    width: 48%;
-    vertical-align: top;
+    margin-bottom: 15px;
 }
 
 main > section:nth-of-type(5) ul {
     list-style: none;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
 }
 
 main > section:nth-of-type(5) ul li button {
-    width: 100%;
-    background: none;
-    border: none;
-    padding: 6px 0;
-    text-align: left;
-    font-size: 12px;
+    background: #ffffff;
+    border: 1px solid #ccc;
+    padding: 8px 12px;
+    border-radius: 4px;
     cursor: pointer;
 }
 
 main > section:nth-of-type(5) > button {
-    display: block;
     width: 100%;
     padding: 14px;
     background-color: #0088ff;
@@ -257,21 +244,19 @@ main > section:nth-of-type(5) > button {
     border-radius: 6px;
     font-size: 15px;
     font-weight: bold;
-    margin-top: 15px;
     cursor: pointer;
 }
 
+/* ==========================================
+   SECCIÓN 6: GARANTÍAS
+   ========================================== */
 main > section:nth-of-type(6) {
     background-color: #eaf4ff;
     display: flex;
-    justify-content: space-around;
-    padding: 25px 40px;
-    margin-top: 30px;
+    flex-direction: column;
+    gap: 15px;
+    padding: 20px;
     border-radius: 6px;
-}
-
-main > section:nth-of-type(6) article {
-    width: 22%;
 }
 
 main > section:nth-of-type(6) article h4 {
@@ -291,5 +276,58 @@ footer {
     font-size: 12px;
     color: #777;
     border-top: 1px solid #eee;
-    margin-top: 20px;
+    margin-top: auto;
+}
+
+/* ==========================================
+   MEDIA QUERIES (RESPONSIVE)
+   ========================================== */
+
+/* Tablet en adelante (Alineación horizontal de tarjetas) */
+@media (min-width: 600px) {
+    main > section:nth-of-type(3) article {
+        flex-direction: row;
+        align-items: center;
+        gap: 15px;
+    }
+}
+
+/* Escritorio / Pantallas Grandes */
+@media (min-width: 992px) {
+    header {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 20px 60px;
+    }
+
+    nav ul {
+        flex-direction: row;
+        gap: 30px;
+    }
+
+    main > section:first-of-type {
+        flex-direction: row;
+        justify-content: space-between;
+        padding: 30px 40px;
+    }
+
+    main {
+        display: grid;
+        grid-template-columns: 1fr 1.2fr 1.5fr;
+        align-items: start;
+    }
+
+    main > section:first-of-type {
+        grid-column: 1 / -1;
+    }
+
+    main > section:nth-of-type(6) {
+        grid-column: 1 / -1;
+        flex-direction: row;
+        justify-content: space-around;
+    }
+
+    main > section:nth-of-type(6) article {
+        width: 22%;
+    }
 }

@@ -1,0 +1,313 @@
+:root {
+    --primary-blue: #0088ff;
+    --hover-blue: #0070d2;
+    --light-blue-bg: #eaf3ff;
+    --card-blue-bg: #dbeeff;
+    --body-bg: #f4f7f9;
+    --text-dark: #2c3e50;
+    --text-muted: #6c757d;
+    --input-bg: #f4eff6;
+    --white: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+/* RESET GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: var(--font-main);
+}
+
+body {
+    background-color: var(--body-bg);
+    color: var(--text-dark);
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+/* CABECERA / NAVBAR */
+.main-header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    padding: 1.2rem 8%;
+    background-color: var(--white);
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.03);
+}
+
+.logo h1 {
+    color: var(--primary-blue);
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+.main-nav ul {
+    display: flex;
+    flex-direction: column;
+    list-style: none;
+    align-items: center;
+    gap: 1rem;
+    width: 100%;
+}
+
+.main-nav a {
+    text-decoration: none;
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.main-nav a.active {
+    border-bottom: 2px solid var(--primary-blue);
+}
+
+.btn-login {
+    background-color: var(--primary-blue);
+    color: var(--white) !important;
+    padding: 0.7rem 1.6rem;
+    border-radius: 6px;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-weight: 600 !important;
+    text-decoration: none;
+    transition: background-color 0.2s;
+}
+
+.btn-login:hover {
+    background-color: var(--hover-blue);
+}
+
+/* BANNER HERO */
+.hero-directory {
+    background-color: var(--light-blue-bg);
+    padding: 3rem 8%;
+    display: flex;
+    flex-direction: column-reverse;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+}
+
+.hero-directory-text h2 {
+    font-size: 2.5rem;
+    color: var(--text-dark);
+    margin-bottom: 0.8rem;
+    line-height: 1.2;
+}
+
+.hero-directory-text p {
+    color: var(--text-muted);
+    font-size: 1.1rem;
+}
+
+.hero-directory-image img {
+    max-width: 320px;
+    height: auto;
+    object-fit: contain;
+}
+
+/* CONTENEDOR BUSCADOR */
+.search-card {
+    background-color: var(--white);
+    max-width: 1100px;
+    width: 90%;
+    margin: -2rem auto 2.5rem auto;
+    padding: 2rem 2.5rem;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    position: relative;
+    z-index: 10;
+}
+
+.search-card h3 {
+    font-size: 1.3rem;
+    color: var(--text-dark);
+    margin-bottom: 1.2rem;
+}
+
+.search-form-row {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+}
+
+.field-group {
+    display: flex;
+    flex-direction: column;
+    gap: 0.4rem;
+    flex: 1;
+}
+
+.field-group label {
+    font-size: 0.95rem;
+    font-weight: 600;
+    color: var(--text-dark);
+}
+
+.field-group input {
+    padding: 1rem 1.2rem;
+    background-color: var(--input-bg);
+    border: 1px solid transparent;
+    border-radius: 6px;
+    font-size: 1rem;
+    outline: none;
+    transition: border-color 0.2s, background-color 0.2s;
+}
+
+.field-group input:focus {
+    border-color: var(--primary-blue);
+    background-color: var(--white);
+}
+
+.btn-search-blue {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border: none;
+    padding: 1rem 2.5rem;
+    font-size: 1rem;
+    font-weight: bold;
+    border-radius: 6px;
+    cursor: pointer;
+    transition: background-color 0.2s;
+    align-self: stretch;
+}
+
+.btn-search-blue:hover {
+    background-color: var(--hover-blue);
+}
+
+/* LISTADO DE MÉDICOS */
+.doctors-section {
+    max-width: 1100px;
+    width: 90%;
+    margin: 0 auto 3rem auto;
+}
+
+.doctors-section h3 {
+    font-size: 1.4rem;
+    color: var(--text-dark);
+    margin-bottom: 1.5rem;
+}
+
+.doctors-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+}
+
+.doctor-card {
+    background-color: var(--white);
+    border-radius: 10px;
+    padding: 1.5rem;
+    border-left: 5px solid var(--primary-blue);
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.04);
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+}
+
+.doctor-avatar {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    background-color: var(--light-blue-bg);
+}
+
+.doctor-info h4 {
+    font-size: 1.2rem;
+    color: var(--text-dark);
+}
+
+.doctor-info .specialty {
+    color: var(--primary-blue);
+    font-weight: 600;
+    font-size: 0.95rem;
+    margin-top: 0.2rem;
+}
+
+.doctor-info .hospital {
+    color: var(--text-muted);
+    font-size: 0.85rem;
+    margin-top: 0.2rem;
+}
+
+/* BARRA DE BENEFICIOS INFERIOR */
+.features-bar {
+    background-color: var(--light-blue-bg);
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+    align-items: center;
+    padding: 2rem 8%;
+    margin-top: auto;
+}
+
+.feature-item {
+    display: flex;
+    align-items: center;
+    gap: 0.8rem;
+    color: var(--text-dark);
+    font-weight: 600;
+    font-size: 1rem;
+}
+
+.feature-item i {
+    color: var(--primary-blue);
+    font-size: 1.5rem;
+}
+
+footer {
+    text-align: center;
+    padding: 1.5rem;
+    background-color: var(--white);
+    color: var(--text-muted);
+    font-size: 0.9rem;
+}
+
+/* MEDIA QUERIES PARA PANTALLAS ESCRITORIO */
+@media (min-width: 768px) {
+    .main-header {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .main-nav ul {
+        flex-direction: row;
+        gap: 2rem;
+    }
+
+    .hero-directory {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+        padding: 3.5rem 8%;
+    }
+
+    .search-form-row {
+        flex-direction: row;
+        align-items: flex-end;
+    }
+
+    .btn-search-blue {
+        align-self: auto;
+    }
+
+    .doctors-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    .features-bar {
+        flex-direction: row;
+        justify-content: space-around;
+    }
+}

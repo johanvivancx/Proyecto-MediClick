@@ -1,14 +1,18 @@
 <!DOCTYPE html>
 <html lang="es">
-johan-vivanco
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Pago y confirmación de citas médicas en MediClick">
     <meta name="author" content="Johan Jair Oña Vivanco">
     <title>Pago y Confirmación | MediClick</title>
-    <link rel="stylesheet" href="../style.css">
+    <!-- CSS en la raíz -->
+    <link rel="stylesheet" href="../css_pagoyconfirmacion.css">
+    <!-- FontAwesome para íconos -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
+
 <body>
 
     <!-- NAVBAR SUPERIOR -->
@@ -17,30 +21,29 @@ johan-vivanco
         <nav>
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Mi Perfil</a></li>
-                <li><a href="directoriomedico.html">Directorio Médico</a></li>
-                <li><a href="#">Contacto / Ayuda</a></li>
+                <li><a href="../pages/directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="../pages/mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="../pages/pantalla-reserva-contacto.html">Contacto</a></li>
+                <li><a href="../pages/pantalla-Iniciar-seion.html">Iniciar Sesión</a></li>
             </ul>
         </nav>
-        <button class="btn-login">👤 Iniciar Sesión</button>
+        <a href="pantalla-Iniciar-seion.html" class="btn-login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a>
     </header>
 
     <!-- BARRA SUB-HEADER -->
     <div class="sub-header">
-        <button class="btn-back">←</button>
+        <a href="reservas.html" class="btn-back">← Volver</a>
         <h2>Pago y Confirmación</h2>
     </div>
 
     <!-- CONTENEDOR PRINCIPAL (DOS COLUMNAS) -->
     <main class="checkout-container">
         
-        <!-- COLUMNA IZQUIERDA: INFORMACIÓN DE PAGO -->
-        <div class="left-column">
+        <!-- COLUMNA IZQUIERDA: FORMULARIO DE PAGO -->
+        <section class="left-column">
             
-            <h2 class="column-title">Información de Pago</h2>
+            <h3 class="column-title">Información de Pago</h3>
 
-            <!-- Tarjeta Blanco Estilo UI Kit -->
             <div class="card-box-white">
                 
                 <!-- Banner Pago Seguro -->
@@ -49,52 +52,52 @@ johan-vivanco
                     <p><strong>Pago Seguro:</strong> Tus transacciones están cifradas con encriptación de grado médico.</p>
                 </div>
 
-                <!-- Método de Pago (Select) -->
-                <div class="form-group">
-                    <label for="metodo-pago" class="form-label">Método de pago</label>
-                    <select id="metodo-pago" class="form-control">
-                        <option value="transferencia" selected>Transferencia</option>
-                        <option value="tarjeta_debito">Tarjeta de Débito</option>
-                        <option value="tarjeta_credito">Tarjeta de Crédito</option>
-                    </select>
-                </div>
-
-                <!-- Número de Tarjeta -->
-                <div class="form-group">
-                    <label for="numero-tarjeta" class="form-label">Número de tarjeta</label>
-                    <input type="text" id="numero-tarjeta" class="form-control" placeholder="1234 5678 9012 3456">
-                </div>
-
-                <!-- Nombre del Titular -->
-                <div class="form-group">
-                    <label for="nombre-titular" class="form-label">Nombre del titular</label>
-                    <input type="text" id="nombre-titular" class="form-control" placeholder="Nombre completo">
-                </div>
-
-                <!-- Fecha de Expiración -->
-                <div class="form-group">
-                    <label for="fecha-expiracion" class="form-label">Fecha de expiración</label>
-                    <div class="input-icon-wrapper">
-                        <input type="text" id="fecha-expiracion" class="form-control" placeholder="-------- de ----">
-                        <span class="field-icon">📅</span>
+                <form action="#" method="POST" class="payment-form">
+                    <!-- Método de Pago -->
+                    <div class="form-group">
+                        <label for="metodo-pago" class="form-label">Método de pago</label>
+                        <select id="metodo-pago" name="metodo-pago" class="form-control" required>
+                            <option value="transferencia" selected>Transferencia Bancaria</option>
+                            <option value="tarjeta_debito">Tarjeta de Débito</option>
+                            <option value="tarjeta_credito">Tarjeta de Crédito</option>
+                        </select>
                     </div>
-                </div>
 
-                <!-- Código CVV -->
-                <div class="form-group">
-                    <label for="codigo-cvv" class="form-label">Código CVV</label>
-                    <input type="text" id="codigo-cvv" class="form-control" placeholder="123">
-                </div>
+                    <!-- Número de Tarjeta -->
+                    <div class="form-group">
+                        <label for="numero-tarjeta" class="form-label">Número de tarjeta</label>
+                        <input type="text" id="numero-tarjeta" name="numero-tarjeta" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                    </div>
 
-                <!-- Botón de Confirmación -->
-                <button class="btn-confirm-pay mt-20">Confirmar Pago</button>
+                    <!-- Nombre del Titular -->
+                    <div class="form-group">
+                        <label for="nombre-titular" class="form-label">Nombre del titular</label>
+                        <input type="text" id="nombre-titular" name="nombre-titular" class="form-control" placeholder="Ej. Juan Pérez">
+                    </div>
+
+                    <!-- Fecha de Expiración y CVV (En Línea) -->
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="fecha-expiracion" class="form-label">Fecha de expiración</label>
+                            <input type="month" id="fecha-expiracion" name="fecha-expiracion" class="form-control">
+                        </div>
+
+                        <div class="form-group">
+                            <label for="codigo-cvv" class="form-label">Código CVV</label>
+                            <input type="password" id="codigo-cvv" name="codigo-cvv" class="form-control" placeholder="123" maxlength="4">
+                        </div>
+                    </div>
+
+                    <!-- Botón de Confirmación -->
+                    <button type="submit" class="btn-confirm-pay">Confirmar Pago</button>
+                </form>
 
             </div>
 
-        </div>
+        </section>
 
         <!-- COLUMNA DERECHA: RESUMEN DE CITA -->
-        <div class="right-column">
+        <aside class="right-column">
             
             <!-- Tarjeta: Información del Especialista -->
             <div class="card-box-white">
@@ -102,7 +105,7 @@ johan-vivanco
                 <div class="specialist-details">
                     <img src="../img/doctor.png" alt="Doctor Especialista" class="doctor-avatar">
                     <div class="doctor-info">
-                        <h3>Dr. Alex Martinez</h3>
+                        <h3>Dr. Alex Martínez</h3>
                         <p class="specialty">Cardiología</p>
                         <p class="hospital">Hospital Metropolitano</p>
                         <p class="extra-info">Consulta médica general y seguimiento del paciente.</p>
@@ -120,7 +123,7 @@ johan-vivanco
                     </div>
                     <div class="schedule-item">
                         <span>📍</span>
-                        <p>Hospital Metropolitano de Quito</p>
+                        <p><strong>Ubicación:</strong> Quito, Pichincha</p>
                     </div>
                     <div class="schedule-item">
                         <span>⏰</span>
@@ -138,7 +141,7 @@ johan-vivanco
                 </div>
             </div>
 
-        </div>
+        </aside>
 
     </main>
 
@@ -146,228 +149,21 @@ johan-vivanco
     <footer class="benefits-footer">
         <div class="benefit-item">
             <span class="footer-icon">🛡️</span>
-            <div>
-                <strong>Atención Confiable</strong>
-            </div>
+            <div><strong>Atención Confiable</strong></div>
         </div>
         <div class="benefit-item">
             <span class="footer-icon">👤</span>
-            <div>
-                <strong>Médicos Verificados</strong>
-            </div>
+            <div><strong>Médicos Verificados</strong></div>
         </div>
         <div class="benefit-item">
             <span class="footer-icon">🔒</span>
-            <div>
-                <strong>Seguridad en tus datos</strong>
-            </div>
+            <div><strong>Seguridad en tus datos</strong></div>
         </div>
         <div class="benefit-item">
             <span class="footer-icon">🎧</span>
-            <div>
-                <strong>Ayuda y Soporte 24/7</strong>
-            </div>
+            <div><strong>Ayuda y Soporte 24/7</strong></div>
         </div>
     </footer>
 
-
-<head>
-
-    <meta charset="UTF-8">
-
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-    <meta name="description" content="Pago y confirmación de citas médicas en MediClick">
-
-    <meta name="author" content="Johan Jair Oña Vivanco">
-
-    <title>Pago y Confirmación | MediClick</title>
-
-    <link rel="stylesheet" href="../style.css">
-
-</head>
-
-<body>
-
-<header>
-
-    <h1>MediClick</h1>
-
-    <nav>
-
-        <ul>
-
-            <li><a href="../index.html">Inicio</a></li>
-
-            <li><a href="directoriomedico.html">Directorio Médico</a></li>
-
-            <li><a href="#">Mis Reservas</a></li>
-
-            <li><a href="#">Contacto</a></li>
-
-            <li><a href="#">Iniciar Sesión</a></li>
-
-        </ul>
-
-    </nav>
-
-</header>
-
-<main>
-
-    <section>
-
-        <article>
-
-            <h2>Pago y Confirmación</h2>
-
-            <p>
-
-                Complete los datos de pago para confirmar su cita médica.
-
-            </p>
-
-        </article>
-
-        <aside>
-
-            <img src="../img/pago.png"
-                 alt="Proceso de pago de una cita médica">
-
-        </aside>
-
-    </section>
-
-    <section>
-
-        <h2>Información de Pago</h2>
-
-        <form>
-
-            <label for="metodo">
-                Método de pago
-            </label>
-
-            <select id="metodo">
-
-                <option>Transferencia</option>
-
-                <option>Tarjeta de Crédito</option>
-
-                <option>Tarjeta de Débito</option>
-
-            </select>
-
-            <br><br>
-
-            <label for="numero">
-                Número de tarjeta
-            </label>
-
-            <input
-                type="text"
-                id="numero"
-                placeholder="1234 5678 9012 3456">
-
-            <br><br>
-
-            <label for="titular">
-                Nombre del titular
-            </label>
-
-            <input
-                type="text"
-                id="titular"
-                placeholder="Nombre completo">
-
-            <br><br>
-
-            <label for="fecha">
-                Fecha de expiración
-            </label>
-
-            <input
-                type="month"
-                id="fecha">
-
-            <br><br>
-
-            <label for="cvv">
-                Código CVV
-            </label>
-
-            <input
-                type="password"
-                id="cvv"
-                placeholder="123">
-
-            <br><br>
-
-            <button type="submit">
-
-                Confirmar Pago
-
-            </button>
-
-        </form>
-
-    </section>
-
-    <section>
-
-        <h2>Resumen de la Reserva</h2>
-
-        <article>
-
-            <h3>Especialista</h3>
-
-            <p>Dra. Sofía López</p>
-
-        </article>
-
-        <article>
-
-            <h3>Especialidad</h3>
-
-            <p>Cardiología</p>
-
-        </article>
-
-        <article>
-
-            <h3>Fecha</h3>
-
-            <p>08 de agosto de 2026</p>
-
-        </article>
-
-        <article>
-
-            <h3>Hora</h3>
-
-            <p>09:00 AM</p>
-
-        </article>
-
-        <article>
-
-            <h3>Valor</h3>
-
-            <p>$50.00</p>
-
-        </article>
-
-    </section>
-
-</main>
-
-<footer>
-
-    <p>
-
-        © 2026 MediClick - Todos los derechos reservados.
-
-    </p>
-</footer>
 </body>
 </html>

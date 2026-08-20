@@ -8,122 +8,104 @@
     <meta name="author" content="Johan Vivanco">
     <title>Directorio Médico | MediClick</title>
 
-    <link rel="stylesheet" href="../style.css">
+    <link rel="stylesheet" href="../css_directoriomedico.css">
 </head>
 
 <body>
 
-    <header>
-
-        <h1>MediClick</h1>
-
-        <nav>
-
+    <!-- CABECERA -->
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
+        </div>
+        <nav class="main-nav">
             <ul>
-
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="directoriomedico.html">Directorio Médico</a></li>
-                <li><a href="#">Mis Reservas</a></li>
-                <li><a href="#">Contacto</a></li>
-                <li><a href="#">Iniciar Sesión</a></li>
-
+                <li><a href="../pages/directoriomedico.html" class="active">Directorio Médico</a></li>
+                <li><a href="../pages/mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="../pages/pantalla-reserva-contacto.html">Contacto</a></li>
+                <li><a href="../pages/pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a></li>
             </ul>
-
         </nav>
-
     </header>
 
     <main>
-
-        <section>
-
-            <article>
-
+        <!-- BANNER HERO SUPERIOR -->
+        <section class="hero-directory">
+            <article class="hero-directory-text">
                 <h2>Directorio Médico</h2>
-
-                <p>
-                    Busca especialistas y encuentra el médico que necesitas.
-                </p>
-
+                <p>Busca especialistas y encuentra el médico que necesitas.</p>
             </article>
 
-            <aside>
-
-                <img src="../img/directorio.png"
-                     alt="Directorio de médicos">
-
+            <aside class="hero-directory-image">
+                <img src="../img/directorio.png" alt="Directorio de médicos">
             </aside>
-
         </section>
 
-        <section>
+        <!-- TARJETA BUSCADOR -->
+        <section class="search-card">
+            <h3>Buscar especialista</h3>
 
-            <h2>Buscar especialista</h2>
+            <form action="#" method="get" class="search-form-row">
+                <div class="field-group">
+                    <label for="especialidad">Especialidad</label>
+                    <input 
+                        type="text" 
+                        id="especialidad" 
+                        name="especialidad" 
+                        placeholder="Ejemplo: Cardiología">
+                </div>
 
-            <form action="#" method="get">
+                <div class="field-group">
+                    <label for="ciudad">Ciudad</label>
+                    <input 
+                        type="text" 
+                        id="ciudad" 
+                        name="ciudad" 
+                        placeholder="Ejemplo: Quito">
+                </div>
 
-                <label for="especialidad">
-                    Especialidad
-                </label>
-
-                <input
-                    type="text"
-                    id="especialidad"
-                    name="especialidad"
-                    placeholder="Ejemplo: Cardiología">
-
-                <br><br>
-
-                <label for="ciudad">
-                    Ciudad
-                </label>
-
-                <input
-                    type="text"
-                    id="ciudad"
-                    name="ciudad"
-                    placeholder="Ejemplo: Quito">
-
-                <br><br>
-
-                <button type="submit">
+                <button type="submit" class="btn-search-blue">
                     Buscar
                 </button>
-
             </form>
-
         </section>
 
-        <section>
+        <!-- LISTADO DE MÉDICOS -->
+        <section class="doctors-section">
+            <h3>Médicos disponibles</h3>
 
-            <h2>Médicos disponibles</h2>
+            <div class="doctors-grid">
+                <article class="doctor-card">
+                    <div class="doctor-info">
+                        <h4>Dra. María López</h4>
+                        <p class="specialty">Especialidad: Cardiología</p>
+                        <p class="hospital">Horario: Lunes a Viernes</p>
+                    </div>
+                </article>
 
-            <article>
+                <article class="doctor-card">
+                    <div class="doctor-info">
+                        <h4>Dr. Carlos Pérez</h4>
+                        <p class="specialty">Especialidad: Odontología</p>
+                        <p class="hospital">Horario: Martes a Sábado</p>
+                    </div>
+                </article>
 
-                <h3>Dra. María López</h3>
-                <p>Especialidad: Cardiología</p>
-                <p>Horario: Lunes a Viernes</p>
-
-            </article>
-
-            <article>
-                <h3>Dr. Carlos Pérez</h3>
-                <p>Especialidad: Odontología</p>
-                <p>Horario: Martes a Sábado</p>
-            </article>
-
-            <article>
-                <h3>Dra. Andrea Ruiz</h3>
-                <p>Especialidad: Pediatria</p>
-                <p>Horario: Lunes a Viernes</p>
-            </article>
-
+                <article class="doctor-card">
+                    <div class="doctor-info">
+                        <h4>Dra. Andrea Ruiz</h4>
+                        <p class="specialty">Especialidad: Pediatría</p>
+                        <p class="hospital">Horario: Lunes a Viernes</p>
+                    </div>
+                </article>
+            </div>
         </section>
     </main>
+
     <footer>
-        <p>
-            © 2026 MediClick - Todos los derechos reservados.
-        </p>
+        <p>© 2026 MediClick - Todos los derechos reservados.</p>
     </footer>
+
 </body>
 </html>

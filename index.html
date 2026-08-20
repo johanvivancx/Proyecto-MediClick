@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>MediClick</title>
-    <!-- Enlace a tu archivo CSS responsivo -->
+    <!-- Enlace al CSS responsivo en la raíz -->
     <link rel="stylesheet" href="styleindex.css">
     <!-- Iconos de FontAwesome -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
@@ -20,15 +20,16 @@
         </div>
         <nav class="main-nav">
             <ul>
-                <li><a href="#" class="active">Inicio</a></li>
-                <li><a href="#">Reservas</a></li>
-                <li><a href="#">Mi Perfil</a></li>
-                <li><a href="#">Directorio Médico</a></li>
-                <li><a href="#">Contacto / Ayuda</a></li>
-                <li><a href="#" class="btn-login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a></li>
-            </ul>
-        </nav>
+                <li><a href="index.html" class="active">Inicio</a></li>
+                <li><a href="../Proyecto-MediClick/pages/reservas.html">Reservas</a></li>
+                <li><a href="../Proyecto-MediClick/pages/mis_reservas.html">Mi Perfil</a></li>
+                <li><a href="../Proyecto-MediClick/pages/directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="../Proyecto-MediClick/pages/pantalla-reserva-contacto.html">Contacto / Ayuda</a></li>
+                <li><a href="../Proyecto-MediClick/pages/pantalla-Iniciar-seion.html" class="btn-login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a></li>
+    </ul>
+
     </header>
+    
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
@@ -62,25 +63,33 @@
 
         <!-- SECCIÓN ACCESOS RÁPIDOS -->
         <section class="quick-access">
-            <article class="card">
-                <i class="fa-regular fa-calendar-check card-icon"></i>
-                <h3>Reservar Cita</h3>
-            </article>
+            <a href="../Proyecto-MediClick/pages/reservas.html" class="card-link">
+                <article class="card">
+                    <i class="fa-regular fa-calendar-check card-icon"></i>
+                    <h3>Reservar Cita</h3>
+                </article>
+            </a>
 
-            <article class="card">
-                <i class="fa-regular fa-user card-icon"></i>
-                <h3>Directorio Médico</h3>
-            </article>
+            <a href="../Proyecto-MediClick/pages/directoriomedico.html" class="card-link">
+                <article class="card">
+                    <i class="fa-regular fa-user card-icon"></i>
+                    <h3>Directorio Médico</h3>
+                </article>
+            </a>
 
-            <article class="card">
-                <i class="fa-regular fa-folder-open card-icon"></i>
-                <h3>Mis Reservas</h3>
-            </article>
+            <a href="../Proyecto-MediClick/pages/mis_reservas.html" class="card-link">
+                <article class="card">
+                    <i class="fa-regular fa-folder-open card-icon"></i>
+                    <h3>Mis Reservas</h3>
+                </article>
+            </a>
 
-            <article class="card">
-                <i class="fa-solid fa-headset card-icon"></i>
-                <h3>Contacto / Ayuda</h3>
-            </article>
+            <a href="../Proyecto-MediClick/pages/pantalla-reserva-contacto.html" class="card-link">
+                <article class="card">
+                    <i class="fa-solid fa-headset card-icon"></i>
+                    <h3>Contacto / Ayuda</h3>
+                </article>
+            </a>
         </section>
 
         <!-- SECCIÓN BENEFICIOS INFERIORES -->
