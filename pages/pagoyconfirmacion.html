@@ -7,53 +7,56 @@
     <meta name="description" content="Pago y confirmación de citas médicas en MediClick">
     <meta name="author" content="Johan Jair Oña Vivanco">
     <title>Pago y Confirmación | MediClick</title>
-    <!-- CSS en la raíz -->
     <link rel="stylesheet" href="../css_pagoyconfirmacion.css">
-    <!-- FontAwesome para íconos -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
 
-    <!-- NAVBAR SUPERIOR -->
-    <header class="top-nav">
-        <div class="logo">MEDICLICK</div>
-        <nav>
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/directoriomedico.html">Directorio Médico</a></li>
-                <li><a href="../pages/mis_reservas.html">Mis Reservas</a></li>
-                <li><a href="../pages/pantalla-reserva-contacto.html">Contacto</a></li>
-                <li><a href="../pages/pantalla-Iniciar-seion.html">Iniciar Sesión</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="reservas.html" class="active" aria-current="page">Reservas</a></li>
+                <li><a href="mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html">Contacto</a></li>
             </ul>
+            <div class="auth-buttons">
+                <a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-register">Registrarse</a>
+            </div>
         </nav>
-        <a href="pantalla-Iniciar-seion.html" class="btn-login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a>
     </header>
 
-    <!-- BARRA SUB-HEADER -->
     <div class="sub-header">
-        <a href="reservas.html" class="btn-back">← Volver</a>
+        <a href="reservas_horario.html" class="btn-back">← Volver</a>
         <h2>Pago y Confirmación</h2>
     </div>
 
-    <!-- CONTENEDOR PRINCIPAL (DOS COLUMNAS) -->
     <main class="checkout-container">
-        
+        <section class="step-indicator" style="width: 100%;" aria-label="Progreso de reserva">
+            <h2 style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Pasos de reserva</h2>
+            <ol aria-label="Pasos de reserva de cita">
+                <li>Especialista</li>
+                <li>Horario</li>
+                <li aria-current="step">Pagos</li>
+                <li>Confirmación</li>
+            </ol>
+        </section>
+
         <!-- COLUMNA IZQUIERDA: FORMULARIO DE PAGO -->
         <section class="left-column">
-            
             <h3 class="column-title">Información de Pago</h3>
-
             <div class="card-box-white">
-                
-                <!-- Banner Pago Seguro -->
                 <div class="secure-pay-banner">
-                    <span class="lock-icon">🔒</span>
+                    <span class="lock-icon" aria-hidden="true">🔒</span>
                     <p><strong>Pago Seguro:</strong> Tus transacciones están cifradas con encriptación de grado médico.</p>
                 </div>
-
-                <form action="#" method="POST" class="payment-form">
-                    <!-- Método de Pago -->
+                <form action="confirmacion.html" method="get" class="payment-form">
                     <div class="form-group">
                         <label for="metodo-pago" class="form-label">Método de pago</label>
                         <select id="metodo-pago" name="metodo-pago" class="form-control" required>
@@ -62,48 +65,39 @@
                             <option value="tarjeta_credito">Tarjeta de Crédito</option>
                         </select>
                     </div>
-
-                    <!-- Número de Tarjeta -->
                     <div class="form-group">
                         <label for="numero-tarjeta" class="form-label">Número de tarjeta</label>
-                        <input type="text" id="numero-tarjeta" name="numero-tarjeta" class="form-control" placeholder="1234 5678 9012 3456" maxlength="19">
+                        <input type="text" id="numero-tarjeta" name="numero-tarjeta" class="form-control"
+                            placeholder="1234 5678 9012 3456" maxlength="19" required>
                     </div>
-
-                    <!-- Nombre del Titular -->
                     <div class="form-group">
                         <label for="nombre-titular" class="form-label">Nombre del titular</label>
-                        <input type="text" id="nombre-titular" name="nombre-titular" class="form-control" placeholder="Ej. Juan Pérez">
+                        <input type="text" id="nombre-titular" name="nombre-titular" class="form-control"
+                            placeholder="Ej. Juan Pérez" required>
                     </div>
-
-                    <!-- Fecha de Expiración y CVV (En Línea) -->
                     <div class="form-row">
                         <div class="form-group">
                             <label for="fecha-expiracion" class="form-label">Fecha de expiración</label>
-                            <input type="month" id="fecha-expiracion" name="fecha-expiracion" class="form-control">
+                            <input type="month" id="fecha-expiracion" name="fecha-expiracion" class="form-control"
+                                required>
                         </div>
-
                         <div class="form-group">
                             <label for="codigo-cvv" class="form-label">Código CVV</label>
-                            <input type="password" id="codigo-cvv" name="codigo-cvv" class="form-control" placeholder="123" maxlength="4">
+                            <input type="password" id="codigo-cvv" name="codigo-cvv" class="form-control"
+                                placeholder="123" maxlength="4" required>
                         </div>
                     </div>
-
-                    <!-- Botón de Confirmación -->
                     <button type="submit" class="btn-confirm-pay">Confirmar Pago</button>
                 </form>
-
             </div>
-
         </section>
 
         <!-- COLUMNA DERECHA: RESUMEN DE CITA -->
         <aside class="right-column">
-            
-            <!-- Tarjeta: Información del Especialista -->
             <div class="card-box-white">
                 <p class="section-label">Información del Especialista</p>
                 <div class="specialist-details">
-                    <img src="../img/doctor.png" alt="Doctor Especialista" class="doctor-avatar">
+                    <img src="../img/doctor.png" alt="" aria-hidden="true" class="doctor-avatar">
                     <div class="doctor-info">
                         <h3>Dr. Alex Martínez</h3>
                         <p class="specialty">Cardiología</p>
@@ -113,26 +107,24 @@
                 </div>
             </div>
 
-            <!-- Tarjeta: Información de Horarios -->
             <div class="card-box-white">
                 <p class="section-label">Información de Horarios</p>
                 <div class="schedule-details">
                     <div class="schedule-item">
-                        <span>📅</span>
+                        <span aria-hidden="true">📅</span>
                         <p><strong>Fecha:</strong> 24 de junio, 2026</p>
                     </div>
                     <div class="schedule-item">
-                        <span>📍</span>
+                        <span aria-hidden="true">📍</span>
                         <p><strong>Ubicación:</strong> Quito, Pichincha</p>
                     </div>
                     <div class="schedule-item">
-                        <span>⏰</span>
+                        <span aria-hidden="true">⏰</span>
                         <p><strong>Hora:</strong> 10:00 a. m.</p>
                     </div>
                 </div>
             </div>
 
-            <!-- Tarjeta: Valor y Confirmación -->
             <div class="card-box-white">
                 <p class="section-label">Valor de Pago</p>
                 <div class="price-row">
@@ -140,30 +132,27 @@
                     <span class="price-tag">$50.00</span>
                 </div>
             </div>
-
         </aside>
-
     </main>
 
-    <!-- FOOTER INFORMATIVO -->
     <footer class="benefits-footer">
         <div class="benefit-item">
-            <span class="footer-icon">🛡️</span>
+            <span class="footer-icon" aria-hidden="true">🛡️</span>
             <div><strong>Atención Confiable</strong></div>
         </div>
         <div class="benefit-item">
-            <span class="footer-icon">👤</span>
+            <span class="footer-icon" aria-hidden="true">👤</span>
             <div><strong>Médicos Verificados</strong></div>
         </div>
         <div class="benefit-item">
-            <span class="footer-icon">🔒</span>
+            <span class="footer-icon" aria-hidden="true">🔒</span>
             <div><strong>Seguridad en tus datos</strong></div>
         </div>
         <div class="benefit-item">
-            <span class="footer-icon">🎧</span>
+            <span class="footer-icon" aria-hidden="true">🎧</span>
             <div><strong>Ayuda y Soporte 24/7</strong></div>
         </div>
     </footer>
-
+    <script src="../main.js"></script>
 </body>
 </html>

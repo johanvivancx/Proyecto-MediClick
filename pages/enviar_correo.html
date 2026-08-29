@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enviar Correo | MediClick</title>
+    <link rel="stylesheet" href="../css_contacto_ayuda.css">
+    <style>
+        .mail-card { max-width: 600px; width: 90%; margin: 20px auto; background: white; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.05); padding: 30px; }
+        .mail-card h2 { font-size: 22px; color: #2c3e50; margin-bottom: 5px; display: flex; align-items: center; gap: 10px; }
+        .mail-card p { color: #6c757d; font-size: 14px; margin-bottom: 20px; }
+        .mail-form { display: flex; flex-direction: column; gap: 15px; }
+        .mail-group { display: flex; flex-direction: column; gap: 6px; text-align: left; }
+        .mail-group label { font-size: 13px; font-weight: bold; color: #2c3e50; }
+        .mail-group input, .mail-group textarea { padding: 12px; border: 1px solid #cbd5e0; border-radius: 6px; font-size: 14px; outline: none; background: #f4f5f7; }
+        .mail-group input:focus, .mail-group textarea:focus { border-color: #0088ff; background: white; }
+        .btn-enviar-mail { background: #0088ff; color: white; border: none; padding: 14px; border-radius: 6px; font-weight: bold; cursor: pointer; transition: 0.2s; }
+        .btn-enviar-mail:hover { background: #0070d2; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html" class="active" aria-current="page">Contacto</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-register">Registrarse</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sub-header" style="max-width: 1200px; width: 95%; margin: 25px auto 0 auto; display: flex; align-items: center; gap: 15px;">
+        <a href="pantalla-reserva-contacto.html" class="btn-back" style="color: #0056b3; text-decoration: none; font-weight: bold; font-size: 15px;">← Volver a Contacto</a>
+        <h2>Correo Electrónico</h2>
+    </div>
+
+    <main style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px;">
+        <div class="mail-card">
+            <h2><img src="../img/correo.png" alt="" style="width: 35px; height: 35px; object-fit: contain;"> Enviar mensaje a Smediclick@gmail.com</h2>
+            <p>Completa el formulario y nos pondremos en contacto contigo a la brevedad.</p>
+            
+            <form class="mail-form" id="mailForm">
+                <div class="mail-group">
+                    <label for="remitente">Tu Correo Electrónico</label>
+                    <input type="email" id="remitente" placeholder="tucorreo@ejemplo.com" required>
+                </div>
+                <div class="mail-group">
+                    <label for="asunto">Asunto</label>
+                    <input type="text" id="asunto" placeholder="Ej. Consulta sobre mis citas agendadas" required>
+                </div>
+                <div class="mail-group">
+                    <label for="mensaje">Mensaje</label>
+                    <textarea id="mensaje" rows="5" placeholder="Escribe los detalles de tu requerimiento aquí..." required></textarea>
+                </div>
+                <button type="submit" class="btn-enviar-mail">Enviar Mensaje</button>
+            </form>
+        </div>
+    </main>
+
+    <script>
+        document.getElementById("mailForm").addEventListener("submit", (e) => {
+            e.preventDefault();
+            alert("¡Mensaje enviado con éxito! El equipo de MediClick te responderá pronto a tu correo.");
+            window.location.href = "pantalla-reserva-contacto.html";
+        });
+    </script>
+</body>
+</html>

@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reserva Confirmada - Paso 4 | MediClick</title>
+    <link rel="stylesheet" href="../css_reservas.css">
+    <style>
+        /* Forzamos diseño en columna para arreglar la cuadrícula rota en esta pantalla */
+        main.paso4 {
+            display: flex !important;
+            flex-direction: column !important;
+            align-items: center !important;
+            max-width: 800px !important;
+            margin: 40px auto !important;
+            gap: 30px !important;
+        }
+
+        .success-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+            padding: 60px 20px !important;
+            background-color: #ffffff;
+            border-radius: 12px;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+            width: 100%;
+            text-align: center;
+        }
+    </style>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="reservas.html" class="active" aria-current="page">Reservas</a></li>
+                <li><a href="mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html">Contacto</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-register">Registrarse</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="paso4">
+        <section class="step-indicator" aria-labelledby="titulo-reserva">
+            <h2 id="titulo-reserva"
+                style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">
+                Reservar una Cita</h2>
+            <ol aria-label="Pasos de reserva de cita">
+                <li>Especialista</li>
+                <li>Horario</li>
+                <li>Pagos</li>
+                <li aria-current="step">Confirmación</li>
+            </ol>
+        </section>
+
+        <section class="success-box">
+            <h2 style="color: #2c3e50; font-size: 32px; margin-bottom: 10px;">¡Reserva Confirmada!</h2>
+            <p style="color: #6c757d; font-size: 18px; margin-bottom: 30px;">Tu pago ha sido procesado con éxito y tu
+                cita médica está agendada.</p>
+            <a href="mis_reservas.html"
+                style="background-color: #0088ff; color: white; padding: 15px 35px; text-decoration: none; border-radius: 8px; font-weight: bold; font-size: 16px; white-space: nowrap; transition: 0.2s;">Ver
+                Mis Reservas</a>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 MediClick - Todos los derechos reservados.</p>
+    </footer>
+    <script src="../main.js"></script>
+</body>
+
+</html>

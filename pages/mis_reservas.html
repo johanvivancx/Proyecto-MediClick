@@ -3,91 +3,94 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Mis Reservas | MediClick</title>
+    <title>Mis Reservas - MediClick</title>
     <link rel="stylesheet" href="../css_mis_reservas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    <!-- CABECERA -->
     <header class="main-header">
         <div class="logo">
             <h1>MediClick</h1>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
                 <li><a href="directoriomedico.html">Directorio Médico</a></li>
-                <li><a href="mis_reservas.html" class="active">Mis Reservas</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="mis_reservas.html" class="active" aria-current="page">Mis Reservas</a></li>
                 <li><a href="pantalla-reserva-contacto.html">Contacto</a></li>
-                <li><a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a></li>
             </ul>
+            <div class="auth-buttons">
+                <a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-register">Registrarse</a>
+            </div>
         </nav>
     </header>
 
-    <!-- CONTENEDOR PRINCIPAL -->
     <main class="reservas-container">
         <div class="page-title-row">
-            <a href="../index.html" class="btn-back">←</a>
+            <a href="../index.html" class="btn-back" aria-label="Volver"><i class="fa-solid fa-arrow-left"></i></a>
             <h2>Mis Reservas</h2>
         </div>
 
         <div class="reservas-header-row">
-            <span>FECHA</span>
-            <span>ESPECIALIDAD</span>
-            <span>DETALLE</span>
+            <span>FECHA Y HORA</span>
+            <span>ESPECIALISTA</span>
+            <span>CONSULTORIO</span>
             <span>ESTADO</span>
+            <span>ACCIONES</span>
         </div>
 
-        <div class="reservas-list">
-            <!-- RESERVA 1 -->
+        <section class="reservas-list" aria-label="Listado de reservas">
             <article class="reserva-card">
                 <div class="date-badge">
-                    <span class="day-name">Mañana</span>
-                    <span class="day-number">22</span>
-                    <span class="month-name">MAY</span>
+                    <span class="day-name">LUN</span>
+                    <span class="day-number">15</span>
+                    <span class="month-name">AGO</span>
                 </div>
-                <div class="specialty-title">DENTISTA</div>
-                <div class="doctor-detail">
-                    <p class="time">7pm</p>
-                    <p class="doctor-name">Dr. Felipe Campos</p>
-                    <p class="room">Consultorio 101</p>
+                <div>
+                    <p class="specialty-title">Cardiología</p>
+                    <p class="doctor-detail doctor-name">Dr. Elian Valenzuela</p>
                 </div>
-                <div class="status-wrapper">
+                <div>
+                    <p class="doctor-detail">Quicentro Sur, Quito</p>
+                    <p class="doctor-detail room">Consultorio 203</p>
+                </div>
+                <div>
                     <span class="status-badge">Confirmada</span>
+                </div>
+                <div>
+                    <span class="time">09:00 AM</span>
                 </div>
             </article>
 
-            <!-- RESERVA 2 -->
             <article class="reserva-card">
                 <div class="date-badge">
-                    <span class="day-name">Jueves</span>
-                    <span class="day-number">23</span>
-                    <span class="month-name">MAY</span>
+                    <span class="day-name">MIE</span>
+                    <span class="day-number">17</span>
+                    <span class="month-name">AGO</span>
                 </div>
-                <div class="specialty-title">CARDIÓLOGO</div>
-                <div class="doctor-detail">
-                    <p class="time">7pm</p>
-                    <p class="doctor-name">Dr. Elian Valenzuela</p>
-                    <p class="room">Consultorio 203</p>
+                <div>
+                    <p class="specialty-title">Odontología</p>
+                    <p class="doctor-detail doctor-name">Dr. Felipe Campos</p>
                 </div>
-                <div class="status-wrapper">
+                <div>
+                    <p class="doctor-detail">Hospital Metropolitano</p>
+                    <p class="doctor-detail room">Consultorio 101</p>
+                </div>
+                <div>
                     <span class="status-badge">Confirmada</span>
                 </div>
+                <div>
+                    <span class="time">11:30 AM</span>
+                </div>
             </article>
-        </div>
+        </section>
     </main>
-
-    <!-- BARRA DE BENEFICIOS -->
-    <section class="features-bar">
-        <div class="feature-item">Atención Confiable</div>
-        <div class="feature-item">Médicos Verificados</div>
-        <div class="feature-item">Seguridad en tus datos</div>
-        <div class="feature-item">Ayuda y Soporte 24/7</div>
-    </section>
 
     <footer>
         <p>© 2026 MediClick - Todos los derechos reservados.</p>
     </footer>
-
+    <script src="../main.js"></script>
 </body>
 </html>

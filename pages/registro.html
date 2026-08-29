@@ -3,104 +3,90 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediClick - Registro de Usuario</title>
+    <title>Registro | MediClick</title>
     <link rel="stylesheet" href="../css_registro.css">
 </head>
 <body>
-
-    <header>
-        <div>
-            <a href="../index.html">MEDICLICK</a>
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
         </div>
-        <nav aria-label="Navegación principal">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/directoriomedico.html">Directorio Médico</a></li>
-                <li><a href="../pages/mis_reservas.html">Mis Reservas</a></li>
-                <li><a href="../pages/pantalla-reserva-contacto.html">Contacto</a></li>
-                <li><a href="../pages/pantalla-Iniciar-seion.html">Iniciar Sesión</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html">Contacto</a></li>
             </ul>
+            <div class="auth-buttons">
+                <a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-register active" aria-current="page">Registrarse</a>
+            </div>
         </nav>
     </header>
 
-
-    <main>
-        <section aria-labelledby="banner-titulo">
-            <div>
-                <span aria-hidden="true"></span>
+    <main class="registro-wrapper">
+        <div class="registro-card">
+            <!-- Lado Izquierdo: Banner -->
+            <section class="registro-banner" aria-labelledby="banner-titulo">
                 <h1 id="banner-titulo">MEDICLICK</h1>
-                <p><strong>Tu Salud, Nuestra Prioridad</strong></p>
-                <p>Crea tu cuenta y accede a una mejor experiencia para cuidar de ti y a los tuyos.</p>
-                <p><strong>Empieza, hoy.</strong></p>
-            </div>
-            <div>
+                <p class="subtitle"><strong>Tu Salud, Nuestra Prioridad</strong></p>
+                <p class="desc">Crea tu cuenta y accede a una mejor experiencia para cuidar de ti y a los tuyos.</p>
+                <p class="highlight"><strong>Empieza, hoy.</strong></p>
                 <figure>
-                    <img src="../img/Doctor1.png" alt="Salud en MediClick">
+                    <img src="../img/Doctor1.png" alt="" aria-hidden="true">
                     <figcaption>Cuidado y salud garantizada</figcaption>
                 </figure>
-            </div>
-        </section>
+            </section>
 
-        <section aria-labelledby="formulario-titulo">
-            <div>
+            <!-- Lado Derecho: Formulario -->
+            <section class="registro-form-section" aria-labelledby="formulario-titulo">
                 <h2 id="formulario-titulo">Crear Cuenta</h2>
-                <p>Únete a Mediclick y Gestiona tu salud de forma fácil y segura</p>
+                <p class="form-desc">Únete a Mediclick y Gestiona tu salud de forma fácil y segura</p>
                 
-                <aside aria-label="Progreso del registro">
+                <aside class="progress-bar" aria-label="Progreso del registro">
                     <ul>
-                        <li>
-                            <span aria-hidden="true"></span>
-                            <span>Datos Personales</span>
-                        </li>
-                        <li>
-                            <span aria-hidden="true"></span>
-                            <span>Salud Garantizada</span>
-                        </li>
+                        <li class="active">Datos Personales</li>
+                        <li>Salud Garantizada</li>
                     </ul>
                 </aside>
 
-                <form action="#" method="post">
-                    <div>
+                <form action="mis_reservas.html" method="get" class="registro-form">
+                    <div class="form-group">
                         <label for="nombres">Nombres</label>
                         <input type="text" id="nombres" name="nombres" placeholder="Ingrese sus nombres" required>
                     </div>
-
-                    <div>
+                    <div class="form-group">
                         <label for="apellidos">Apellidos</label>
                         <input type="text" id="apellidos" name="apellidos" placeholder="Ingrese sus apellidos" required>
                     </div>
-
-                    <div>
+                    <div class="form-group full-width">
                         <label for="correo">Correo Electrónico</label>
                         <input type="email" id="correo" name="correo" placeholder="correo@ejemplo.com" required>
                     </div>
-
-                    <div>
+                    <div class="form-group full-width">
                         <label for="telefono">Teléfono Celular</label>
                         <input type="tel" id="telefono" name="telefono" placeholder="Ingrese su número celular" required>
                     </div>
-
-                    <div>
+                    <div class="form-group">
                         <label for="password">Crear Contraseña</label>
-                        <input type="password" id="password" name="password" placeholder="••••••••" required>
+                        <input type="password" id="password" name="password" minlength="8" required>
                     </div>
-
-                    <div>
+                    <div class="form-group">
                         <label for="confirm-password">Confirmar Contraseña</label>
-                        <input type="password" id="confirm-password" name="confirm-password" placeholder="••••••••" required>
+                        <input type="password" id="confirm-password" name="confirm-password" minlength="8" required>
                     </div>
-
-                    <div>
-                        <button type="submit">Confirmar Registro</button>
+                    <div class="form-group full-width">
+                        <button type="submit" class="btn-submit">Confirmar Registro</button>
                     </div>
                 </form>
-
                 <footer>
-                    <p>¿Ya tienes cuenta? <a href="">Iniciar Sesión</a></p>
+                    <p>¿Ya tienes cuenta? <a href="pantalla-Iniciar-seion.html">Iniciar Sesión</a></p>
                 </footer>
-            </div>
-        </section>
+            </section>
+        </div>
     </main>
-
+    <script src="../main.js"></script>
 </body>
 </html>

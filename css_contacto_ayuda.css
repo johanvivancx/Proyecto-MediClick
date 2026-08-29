@@ -1,250 +1,112 @@
-/* ==========================================
-   RESET Y ESTILOS BASE
-   ========================================== */
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-    font-family: 'Segoe UI', Arial, sans-serif;
+:root {
+    --primary-blue: #0088ff;
+    --hover-blue: #0070d2;
+    --light-blue-bg: #eaf3ff;
+    --body-bg: #f8f9fa;
+    --text-dark: #2c3e50;
+    --text-muted: #6c757d;
+    --white: #ffffff;
+    --font-main: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
-body {
-    background-color: #ffffff;
-    color: #333333;
-    display: flex;
-    flex-direction: column;
-    min-height: 100vh;
-}
+* { margin: 0; padding: 0; box-sizing: border-box; font-family: var(--font-main); }
+body { background-color: var(--white); color: var(--text-dark); display: flex; flex-direction: column; min-height: 100vh; }
 
-/* ==========================================
-   HEADER Y NAVEGACIÓN
-   ========================================== */
-header {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 15px;
-    padding: 15px 20px;
-    background-color: #ffffff;
-    border-bottom: 1px solid #e5e5e5;
-}
+/* CABECERA UNIFICADA IDÉNTICA A LAS DEMÁS PÁGINAS */
+.main-header { display: flex; justify-content: space-between; align-items: center; padding: 15px 5%; background-color: var(--white); box-shadow: 0 2px 10px rgba(0,0,0,0.05); position: sticky; top: 0; z-index: 100; }
+.logo h1 { color: var(--primary-blue); font-size: 24px; font-weight: bold; margin: 0; }
 
-header h1 {
-    color: #0088ff;
-    font-size: 20px;
-    font-weight: 800;
-    letter-spacing: 0.5px;
-}
+.main-nav { display: flex; align-items: center; gap: 30px; }
+.main-nav ul { display: flex; list-style: none; gap: 20px; align-items: center; margin: 0; padding: 0; }
+.main-nav a { text-decoration: none; color: #004085; font-size: 15px; font-weight: 700; padding: 5px 8px; border-radius: 4px; transition: background-color 0.2s, color 0.2s; }
+.main-nav a:hover, .main-nav a:focus { background-color: var(--light-blue-bg); color: #002752; outline: 2px solid #004085; }
+.main-nav a.active { border-bottom: 3px solid #004085; color: #004085; }
 
-nav ul {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    list-style: none;
-    gap: 15px;
-    align-items: center;
-}
+.auth-buttons { display: flex; gap: 15px; }
+.main-nav a.btn-login, .main-nav a.btn-register { background-color: var(--primary-blue); color: var(--white) !important; padding: 10px 20px; border-radius: 6px; font-weight: 600; border: none; }
+.main-nav a.btn-login:hover, .main-nav a.btn-register:hover { background-color: var(--hover-blue); color: var(--white); }
 
-nav a {
-    text-decoration: none;
-    color: #0088ff;
-    font-size: 13px;
-    font-weight: 600;
-    transition: color 0.2s;
-}
+/* CONTENIDO PRINCIPAL */
+main { flex: 1; display: flex; flex-direction: column; }
 
-nav a:hover {
-    color: #0055b3;
-}
+/* SECCIÓN 1: INTRODUCCIÓN Y SOPORTE */
+main > section:first-of-type { display: flex; flex-direction: column; align-items: center; text-align: center; gap: 15px; padding: 50px 5%; background-color: var(--body-bg); border-bottom: 1px solid #e2e8f0; }
+main > section:first-of-type h2 { font-size: 32px; color: var(--text-dark); }
+main > section:first-of-type p { color: var(--text-muted); font-size: 16px; max-width: 600px; }
+main > section:first-of-type figure img { width: 120px; margin-top: 20px; }
 
-nav ul li:last-child a {
-    background-color: #0088ff;
-    color: #ffffff;
-    padding: 8px 18px;
-    border-radius: 6px;
-    transition: background-color 0.2s;
-}
+/* SECCIÓN 2: GRID DE CANALES DE CONTACTO (EN FILA) */
+main > section:nth-of-type(2) { padding: 60px 5%; max-width: 1200px; margin: 0 auto; width: 100%; }
+main > section:nth-of-type(2) h3 { margin-bottom: 30px; font-size: 24px; color: var(--text-dark); text-align: center; }
 
-nav ul li:last-child a:hover {
-    background-color: #0066cc;
-}
-
-/* ==========================================
-   SECCIÓN 1: BANNER DE CONTACTO
-   ========================================== */
-main > section:first-of-type {
-    display: flex;
-    flex-direction: column-reverse;
-    align-items: center;
-    text-align: center;
-    gap: 20px;
-    padding: 35px 20px;
-    border-bottom: 1px solid #e5e5e5;
-    background-color: #fafbfc;
-}
-
-main > section:first-of-type h2 {
-    font-size: 24px;
-    color: #1a202c;
-    margin-bottom: 10px;
-}
-
-main > section:first-of-type p {
-    color: #4a5568;
-    font-size: 15px;
-    max-width: 500px;
-}
-
-main > section:first-of-type figure img {
-    width: 120px;
-    height: auto;
-}
-
-/* ==========================================
-   SECCIÓN 2: CANALES DE CONTACTO (GRID)
-   ========================================== */
-main > section:nth-of-type(2) {
-    padding: 40px 20px;
-    max-width: 1100px;
-    margin: 0 auto;
-    width: 100%;
-}
-
-main > section:nth-of-type(2) h3 {
-    margin-bottom: 25px;
-    font-size: 18px;
-    color: #2d3748;
-    text-align: center;
-}
-
-/* Grid dinámico para las tarjetas */
-main > section:nth-of-type(2) {
-    display: block; /* Anula el flex anterior para controlar el contenedor */
-}
-
-main > section:nth-of-type(2) {
+.canales-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 20px;
-}
-
-main > section:nth-of-type(2) h3 {
-    grid-column: 1 / -1; /* Mantiene el título abarcando todo el ancho del Grid */
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+    width: 100%;
 }
 
 main > section:nth-of-type(2) article {
     display: flex;
     flex-direction: column;
     justify-content: space-between;
-    background-color: #eaf4ff;
-    border-radius: 8px;
-    padding: 20px;
+    background-color: var(--light-blue-bg);
+    border-radius: 12px;
+    padding: 30px 20px;
     text-align: center;
     transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.03);
 }
 
 main > section:nth-of-type(2) article:hover {
-    transform: translateY(-3px);
-    box-shadow: 0 4px 12px rgba(0, 136, 255, 0.12);
+    transform: translateY(-5px);
+    box-shadow: 0 8px 20px rgba(0, 136, 255, 0.15);
+}
+
+.contacto-icon {
+    width: 50px;
+    height: 50px;
+    object-fit: contain;
+    margin: 0 auto 15px auto;
 }
 
 main > section:nth-of-type(2) article h4 {
-    font-size: 16px;
-    color: #1a202c;
-    margin-bottom: 8px;
+    font-size: 18px;
+    color: var(--text-dark);
+    margin-bottom: 10px;
 }
 
 main > section:nth-of-type(2) article p {
     font-size: 14px;
     font-weight: 700;
-    color: #2b6cb0;
-    margin-bottom: 15px;
+    color: var(--primary-blue);
+    margin-bottom: 20px;
     word-break: break-word;
 }
 
 main > section:nth-of-type(2) article a {
-    display: block;
-    background-color: #0088ff;
-    color: #ffffff;
+    display: inline-block;
+    background-color: var(--primary-blue);
+    color: var(--white);
     text-decoration: none;
-    padding: 10px;
-    border-radius: 6px;
-    font-size: 13px;
-    font-weight: 700;
+    padding: 12px 20px;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
     transition: background-color 0.2s;
 }
 
 main > section:nth-of-type(2) article a:hover {
-    background-color: #0066cc;
+    background-color: var(--hover-blue);
 }
 
-/* ==========================================
-   SECCIÓN 3: GARANTÍAS Y SOPORTE
-   ========================================== */
-main > section:nth-of-type(3) {
-    background-color: #eaf4ff;
-    padding: 30px 20px;
-    margin-top: auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
-    gap: 20px;
-    text-align: center;
-}
+/* PIE DE PÁGINA */
+footer { text-align: center; padding: 20px; background-color: var(--white); color: var(--text-muted); font-size: 14px; border-top: 1px solid #e2e8f0; margin-top: auto; }
 
-main > section:nth-of-type(3) article {
-    width: 100%;
-}
-
-main > section:nth-of-type(3) article h4 {
-    font-size: 14px;
-    margin-bottom: 4px;
-    color: #1a202c;
-    font-weight: 700;
-}
-
-main > section:nth-of-type(3) article p {
-    font-size: 12px;
-    color: #4a5568;
-}
-
-/* ==========================================
-   FOOTER
-   ========================================== */
-footer {
-    text-align: center;
-    padding: 20px;
-    background-color: #ffffff;
-    font-size: 12px;
-    color: #718096;
-    border-top: 1px solid #eee;
-}
-
-/* ==========================================
-   MEDIA QUERIES (DESKTOP)
-   ========================================== */
-@media (min-width: 768px) {
-    header {
-        flex-direction: row;
-        justify-content: space-between;
-        padding: 20px 60px;
-    }
-
-    nav ul {
-        gap: 25px;
-    }
-
-    main > section:first-of-type {
-        flex-direction: row;
-        justify-content: space-between;
-        text-align: left;
-        padding: 50px 80px;
-    }
-
-    main > section:first-of-type figure img {
-        width: 140px;
-    }
-
-    main > section:nth-of-type(2) h3 {
-        text-align: left;
-    }
+/* RESPONSIVE MÓVIL */
+@media (max-width: 768px) {
+    .main-header { flex-direction: column; gap: 15px; }
+    .main-nav { flex-direction: column; width: 100%; gap: 15px; }
+    .main-nav ul { flex-direction: column; gap: 15px; }
+    .canales-grid { grid-template-columns: 1fr; }
 }

@@ -1,102 +1,77 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediClick - Contacto / Ayuda</title>
+    <title>Contacto / Ayuda | MediClick</title>
     <link rel="stylesheet" href="../css_contacto_ayuda.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
-<body>
 
-    
-    <header>
-        <h1>MediClick</h1>
-        <nav aria-label="Navegación principal">
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/directoriomedico.html">Directorio Médico</a></li>
-                <li><a href="../pages/mis_reservas.html">Mis Reservas</a></li>
-                <li><a href="../pages/pantalla-reserva-contacto.html">Contacto</a></li>
-                <li><a href="../pages/pantalla-Iniciar-seion.html">Iniciar Sesión</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html" class="active" aria-current="page">Contacto</a></li>
             </ul>
+            <div class="auth-buttons">
+                <a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-register">Registrarse</a>
+            </div>
         </nav>
     </header>
 
-    
     <main>
-        
         <section aria-labelledby="titulo-contacto">
             <h2 id="titulo-contacto">Contacto / Ayuda</h2>
             <p>Estamos aquí para resolver tus dudas y ayudarte a mejorar tu salud y la de a quien amas.</p>
-            
             <figure>
-                <img src="../Proyecto-MediClick/img/soporte.png" alt="Icono de atención y soporte con auriculares">
+                <img src="../img/soporte.png" alt="" aria-hidden="true" style="width: 120px;">
             </figure>
         </section>
 
-        
         <section aria-labelledby="titulo-canales">
             <h3 id="titulo-canales">Canales de Contacto Oficiales</h3>
-
-            
-            <article>
-                <h4>Chat en línea</h4>
-                <p>Habla con nuestro bot de respuestas</p>
-                <a href="#">Chatea Ahora</a>
-            </article>
-
-            
-            <article>
-                <h4>WhatsApp</h4>
-                <p>+593 99 123 4567</p>
-                <a href="#">Ir a WhatsApp</a>
-            </article>
-
-            
-            <article>
-                <h4>Correo Electrónico</h4>
-                <p>Smediclick@gmail.com</p>
-                <a href="#">Enviar Correo</a>
-            </article>
-
-            
-            <article>
-                <h4>Instagram</h4>
-                <p>Mediclick_Oficial</p>
-                <a href="#">Visitar Cuenta</a>
-            </article>
-        </section>
-
-        
-        <section aria-labelledby="titulo-garantias">
-            <h3 id="titulo-garantias" hidden>Información y Garantías</h3>
-            
-            <article>
-                <h4>Atencion Confiable</h4>
-                <p>Servicio médico de calidad garantizado.</p>
-            </article>
-
-            <article>
-                <h4>Medicos Verificados</h4>
-                <p>Profesionales de la salud certificados.</p>
-            </article>
-
-            <article>
-                <h4>Seguridad en tus datos</h4>
-                <p>Protección total de tu información personal.</p>
-            </article>
-
-            <article>
-                <h4>Ayuda y Soporte 24/7</h4>
-                <p>Asistencia disponible en todo momento.</p>
-            </article>
+            <div class="canales-grid">
+                <article>
+                    <img src="../img/chatbot.png" alt="" class="contacto-icon" aria-hidden="true">
+                    <h4>Chat en línea</h4>
+                    <p>Habla con nuestro bot de respuestas</p>
+                    <a href="chat_soporte.html">Chatea Ahora</a>
+                </article>
+                <article>
+                    <img src="../img/WHATSAPP.png" alt="" class="contacto-icon" aria-hidden="true">
+                    <h4>WhatsApp</h4>
+                    <p>+593 99 123 4567</p>
+                    <a href="whatsapp_soporte.html">Ir a WhatsApp</a>
+                </article>
+                <article>
+                    <img src="../img/correo.png" alt="" class="contacto-icon" aria-hidden="true">
+                    <h4>Correo Electrónico</h4>
+                    <p>Smediclick@gmail.com</p>
+                    <a href="enviar_correo.html">Enviar Correo</a>
+                </article>
+                <article>
+                    <img src="../img/Instagram.png" alt="" class="contacto-icon" aria-hidden="true">
+                    <h4>Instagram</h4>
+                    <p>Mediclick_Oficial</p>
+                    <a href="instagram_perfil.html">Visitar Cuenta</a>
+                </article>
+            </div>
         </section>
     </main>
 
-    
     <footer>
-        <p>&copy; 2026 MediClick - Todos los derechos reservados.</p>
+        <p>© 2026 MediClick - Todos los derechos reservados.</p>
     </footer>
-
 </body>
+
 </html>

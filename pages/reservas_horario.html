@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Reservar Cita - Horario | MediClick</title>
+    <link rel="stylesheet" href="../css_reservas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo"><h1>MediClick</h1></div>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="reservas.html" class="active" aria-current="page">Reservas</a></li>
+                <li><a href="mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html">Contacto</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-register">Registrarse</a>
+            </div>
+        </nav>
+    </header>
+
+    <main class="paso2">
+        <section class="step-indicator" aria-labelledby="titulo-reserva">
+            <h2 id="titulo-reserva" style="position: absolute; width: 1px; height: 1px; padding: 0; margin: -1px; overflow: hidden; clip: rect(0, 0, 0, 0); border: 0;">Reservar una Cita</h2>
+            <ol aria-label="Pasos de reserva de cita">
+                <li>Especialista</li>
+                <li aria-current="step">Horario</li>
+                <li>Pagos</li>
+                <li>Confirmación</li>
+            </ol>
+        </section>
+
+        <section class="detalle" aria-labelledby="titulo-detalle-especialista">
+            <h3 id="titulo-detalle-especialista">Información del Especialista</h3>
+            <img src="../img/DOCTORA.png" alt="" aria-hidden="true">
+            <h4>Dra. Ana Martínez</h4>
+            <p style="color: #0088ff; font-weight: bold;">Cardiología</p>
+            <p>Hospital Metropolitano</p>
+            <p style="margin-top: 10px;">Review: 8 Años de Experiencia</p>
+        </section>
+
+        <section class="calendario" aria-labelledby="titulo-calendario">
+            <h3 id="titulo-calendario">Calendario y Horarios</h3>
+            <div style="margin-bottom: 20px;">
+                <time datetime="2026-06" style="padding: 10px 15px; background-color: #f8f9fa; border-radius: 6px; font-weight: bold; color: #0088ff;">Junio 2026</time>
+            </div>
+            <h4>Horarios Disponibles</h4>
+            <ul>
+                <li><button type="button">08:00 a.m.</button></li>
+                <li><button type="button">09:00 a.m.</button></li>
+                <li><button type="button">10:00 a.m.</button></li>
+                <li><button type="button">11:00 a.m.</button></li>
+                <li><button type="button">12:00 p.m.</button></li>
+                <li><button type="button">03:00 p.m.</button></li>
+            </ul>
+            <form action="pagoyconfirmacion.html" method="get">
+                <button type="submit" class="btn-proceder">Proceder al Pago</button>
+            </form>
+        </section>
+    </main>
+
+    <footer>
+        <p>© 2026 MediClick - Todos los derechos reservados.</p>
+    </footer>
+    <script src="../main.js"></script>
+</body>
+</html>

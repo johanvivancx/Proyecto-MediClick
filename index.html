@@ -13,23 +13,24 @@
 
 <body>
 
-    <!-- CABECERA PRINCIPAL -->
+
     <header class="main-header">
         <div class="logo">
             <h1>MediClick</h1>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
-                <li><a href="index.html" class="active">Inicio</a></li>
-                <li><a href="../Proyecto-MediClick/pages/reservas.html">Reservas</a></li>
-                <li><a href="../Proyecto-MediClick/pages/mis_reservas.html">Mi Perfil</a></li>
-                <li><a href="../Proyecto-MediClick/pages/directoriomedico.html">Directorio Médico</a></li>
-                <li><a href="../Proyecto-MediClick/pages/pantalla-reserva-contacto.html">Contacto / Ayuda</a></li>
-                <li><a href="../Proyecto-MediClick/pages/pantalla-Iniciar-seion.html" class="btn-login"><i class="fa-solid fa-user"></i> Iniciar Sesión</a></li>
-    </ul>
-
+                <li><a href="index.html" class="active" aria-current="page">Inicio</a></li>
+                <li><a href="pages/directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="pages/reservas.html">Reservas</a></li>
+                <li><a href="pages/mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pages/pantalla-reserva-contacto.html">Contacto</a></li>
+                <li><a href="pages/pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a></li>
+                <li><a href="pages/registro.html" class="btn-login">Registrarse</a></li>
+            </ul>
+        </nav>
     </header>
-    
+
 
     <!-- CONTENIDO PRINCIPAL -->
     <main>
@@ -63,30 +64,27 @@
 
         <!-- SECCIÓN ACCESOS RÁPIDOS -->
         <section class="quick-access">
-            <a href="../Proyecto-MediClick/pages/reservas.html" class="card-link">
+            <a href="pages/reservas.html" class="card-link">
                 <article class="card">
-                    <i class="fa-regular fa-calendar-check card-icon"></i>
+                    <i class="fa-regular fa-calendar-check card-icon" aria-hidden="true"></i>
                     <h3>Reservar Cita</h3>
                 </article>
             </a>
-
-            <a href="../Proyecto-MediClick/pages/directoriomedico.html" class="card-link">
+            <a href="pages/directoriomedico.html" class="card-link">
                 <article class="card">
-                    <i class="fa-regular fa-user card-icon"></i>
+                    <i class="fa-regular fa-user card-icon" aria-hidden="true"></i>
                     <h3>Directorio Médico</h3>
                 </article>
             </a>
-
-            <a href="../Proyecto-MediClick/pages/mis_reservas.html" class="card-link">
+            <a href="pages/mis_reservas.html" class="card-link">
                 <article class="card">
-                    <i class="fa-regular fa-folder-open card-icon"></i>
+                    <i class="fa-regular fa-folder-open card-icon" aria-hidden="true"></i>
                     <h3>Mis Reservas</h3>
                 </article>
             </a>
-
-            <a href="../Proyecto-MediClick/pages/pantalla-reserva-contacto.html" class="card-link">
+            <a href="pages/pantalla-reserva-contacto.html" class="card-link">
                 <article class="card">
-                    <i class="fa-solid fa-headset card-icon"></i>
+                    <i class="fa-solid fa-headset card-icon" aria-hidden="true"></i>
                     <h3>Contacto / Ayuda</h3>
                 </article>
             </a>
@@ -117,6 +115,7 @@
     <footer>
         <p>© 2026 MediClick - Todos los derechos reservados.</p>
     </footer>
-
+    <script src="main.js"></script>
 </body>
+
 </html>

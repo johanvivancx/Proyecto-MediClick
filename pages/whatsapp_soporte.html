@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Soporte por WhatsApp | MediClick</title>
+    <link rel="stylesheet" href="../css_contacto_ayuda.css">
+    <style>
+        .wa-container { max-width: 550px; width: 90%; margin: 20px auto; background: #efeae2; border-radius: 12px; box-shadow: 0 4px 15px rgba(0,0,0,0.1); display: flex; flex-direction: column; overflow: hidden; }
+        .wa-header { background: #075e54; color: white; padding: 15px 20px; display: flex; align-items: center; gap: 12px; font-weight: bold; }
+        .wa-header img { width: 40px; height: 40px; border-radius: 50%; object-fit: cover; background: white; }
+        .wa-body { padding: 20px; height: 320px; overflow-y: auto; display: flex; flex-direction: column; gap: 12px; background-image: radial-gradient(#cbd5e0 1px, transparent 1px); background-size: 20px 20px; }
+        .wa-msg { padding: 10px 14px; border-radius: 8px; max-width: 80%; font-size: 14px; line-height: 1.4; box-shadow: 0 1px 2px rgba(0,0,0,0.1); }
+        .wa-incoming { background: #ffffff; color: #333; align-self: flex-start; }
+        .wa-outgoing { background: #dcf8c6; color: #333; align-self: flex-end; }
+        .wa-footer { display: flex; padding: 12px; background: #f0f0f0; gap: 10px; align-items: center; }
+        .wa-footer input { flex: 1; padding: 12px 15px; border: none; border-radius: 20px; outline: none; font-size: 14px; }
+        .wa-footer button { background: #075e54; color: white; border: none; width: 40px; height: 40px; border-radius: 50%; font-weight: bold; cursor: pointer; display: flex; align-items: center; justify-content: center; }
+    </style>
+</head>
+<body>
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
+            <ul>
+                <li><a href="../index.html">Inicio</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html" class="active" aria-current="page">Contacto</a></li>
+            </ul>
+            <div class="auth-buttons">
+                <a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a>
+                <a href="registro.html" class="btn-register">Registrarse</a>
+            </div>
+        </nav>
+    </header>
+
+    <div class="sub-header" style="max-width: 1200px; width: 95%; margin: 25px auto 0 auto; display: flex; align-items: center; gap: 15px;">
+        <a href="pantalla-reserva-contacto.html" class="btn-back" style="color: #0056b3; text-decoration: none; font-weight: bold; font-size: 15px;">← Volver a Contacto</a>
+        <h2>Soporte por WhatsApp</h2>
+    </div>
+
+    <main style="flex: 1; display: flex; justify-content: center; align-items: center; padding: 20px;">
+        <div class="wa-container">
+            <div class="wa-header">
+                <img src="../img/WHATSAPP.png" alt="">
+                <div>
+                    <div>MediClick Soporte Oficial</div>
+                    <div style="font-size: 11px; font-weight: normal; opacity: 0.8;">En línea</div>
+                </div>
+            </div>
+            <div class="wa-body" id="waBody">
+                <div class="wa-msg wa-incoming">¡Hola! Te comunicas con la central de atención de <strong>MediClick</strong> por WhatsApp (+593 99 123 4567). ¿Cómo podemos ayudarte hoy con tus citas?</div>
+            </div>
+            <div class="wa-footer">
+                <input type="text" id="waInput" placeholder="Escribe un mensaje..." autofocus>
+                <button id="waSendBtn">➤</button>
+            </div>
+        </div>
+    </main>
+
+    <script>
+        const body = document.getElementById("waBody");
+        const input = document.getElementById("waInput");
+        const btn = document.getElementById("waSendBtn");
+
+        function enviarMensajeWA() {
+            const texto = input.value.trim();
+            if(!texto) return;
+            
+            const userDiv = document.createElement("div");
+            userDiv.className = "wa-msg wa-outgoing";
+            userDiv.textContent = texto;
+            body.appendChild(userDiv);
+            input.value = "";
+            body.scrollTop = body.scrollHeight;
+
+            setTimeout(() => {
+                const botDiv = document.createElement("div");
+                botDiv.className = "wa-msg wa-incoming";
+                botDiv.textContent = "Mensaje recibido correctamente. Un operador humano te responderá en breve a través de este chat.";
+                body.appendChild(botDiv);
+                body.scrollTop = body.scrollHeight;
+            }, 1000);
+        }
+
+        btn.addEventListener("click", enviarMensajeWA);
+        input.addEventListener("keypress", (e) => { if(e.key === "Enter") enviarMensajeWA(); });
+    </script>
+</body>
+</html>

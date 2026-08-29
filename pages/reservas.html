@@ -3,29 +3,30 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>MediClick - Reservas</title>
+    <title>Reservar Cita - Especialista | MediClick</title>
     <link rel="stylesheet" href="../css_reservas.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
-
-    
-    <header>
-        <h1>MediClick</h1>
-        <nav aria-label="Navegación principal">
+    <header class="main-header">
+        <div class="logo">
+            <h1>MediClick</h1>
+        </div>
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/directoriomedico.html">Directorio Médico</a></li>
-                <li><a href="../pages/mis_reservas.html">Mis Reservas</a></li>
-                <li><a href="../pages/pantalla-reserva-contacto.html">Contacto</a></li>
-                <li><a href="../pages/pantalla-Iniciar-seion.html">Iniciar Sesión</a></li>
+                <li><a href="directoriomedico.html">Directorio Médico</a></li>
+                <li><a href="reservas.html" class="active" aria-current="page">Reservas</a></li>
+                <li><a href="mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html">Contacto</a></li>
+                <li><a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a></li>
+                <li><a href="registro.html" class="btn-login">Registrarse</a></li>
             </ul>
         </nav>
     </header>
 
-    
-    <main>
-        
-        <section aria-labelledby="titulo-reserva">
+    <main class="paso1">
+        <section class="step-indicator" aria-labelledby="titulo-reserva">
             <h2 id="titulo-reserva">Reservar una Cita</h2>
             <ol aria-label="Pasos de reserva de cita">
                 <li aria-current="step">Especialista</li>
@@ -35,148 +36,89 @@
             </ol>
         </section>
 
-        
-        <section aria-labelledby="titulo-filtros">
+        <aside class="filtros" aria-labelledby="titulo-filtros">
             <h3 id="titulo-filtros">Filtrar Especialistas</h3>
-            <form action="#" method="get">
-                <div>
-                    <label for="especialidad">Especialidad:</label>
-                    <select id="especialidad" name="especialidad">
-                        <option value="">Especialidad</option>
-                        <option value="cardiologia">Cardiología</option>
-                        <option value="medicina-general">Medicina General</option>
-                    </select>
+            <form action="#" method="get" class="search-form-row">
+                <div class="field-group">
+                    <label for="especialidad">Especialidad</label>
+                    <input type="text" id="especialidad" name="especialidad" placeholder="Ej. Cardiología">
                 </div>
-
-                <div>
-                    <label for="ubicacion">Ubicación:</label>
-                    <select id="ubicacion" name="ubicacion">
-                        <option value="">Ubicación</option>
-                        <option value="hospital-metropolitano">Hospital Metropolitano</option>
-                    </select>
+                <div class="field-group">
+                    <label for="ciudad">Ubicación / Ciudad</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Ej. Quicentro, Quito">
                 </div>
-
-                <div>
-                    <label for="tipo-atencion">Tipo de Atención:</label>
-                    <select id="tipo-atencion" name="tipo-atencion">
-                        <option value="">Tipo de Atención</option>
-                        <option value="presencial">Presencial</option>
-                        <option value="virtual">Virtual</option>
-                    </select>
-                </div>
-
-                <button type="submit">Filtrar</button>
+                <button type="submit" class="btn-search-blue">Filtrar</button>
             </form>
-            <button type="button">Ver más Especialistas</button>
-        </section>
+        </aside>
 
-        
-        <section aria-labelledby="titulo-lista-medicos">
-            <h3 id="titulo-lista-medicos">Lista de Especialistas Disponibles</h3>
-
+        <section class="lista" aria-labelledby="titulo-lista">
+            <h3 id="titulo-lista">Lista de Especialistas Disponibles</h3>
             
-            <article>
-                <figure>
-                    <img src="../img/DOCTORA.png" alt="Foto de perfil de la Dra. Ana Martínez">
-                </figure>
-                <h4>Dra. Ana Martínez</h4>
-                <p>Cardiología</p>
-                <p>Hospital Metropolitano</p>
-                <p>Calificación: 5 de 5 estrellas</p>
+            <article class="doctor-card">
+                <img src="../img/Doctor1.png" alt="" aria-hidden="true" class="doctor-avatar">
+                <div class="info-doc doctor-info">
+                    <h4>Dr. Felipe Campos</h4>
+                    <p class="specialty">Especialidad: Odontología / Dentista</p>
+                    <p class="hospital">📍 Hospital Metropolitano, Quito • Consultorio 101</p>
+                </div>
+                <a href="reservas_horario.html" class="btn-select">Seleccionar</a>
             </article>
 
-            
-            <article>
-                <figure>
-                    <img src="../img/Doctor1.png" alt="Foto de perfil del Dr. Juan Pérez">
-                </figure>
-                <h4>Dr. Juan Pérez</h4>
-                <p>Medicina General</p>
-                <p>Hospital Metropolitano</p>
-                <p>Calificación: 5 de 5 estrellas</p>
+            <article class="doctor-card">
+                <img src="../img/doctor.png" alt="" aria-hidden="true" class="doctor-avatar">
+                <div class="info-doc doctor-info">
+                    <h4>Dr. Elian Valenzuela</h4>
+                    <p class="specialty">Especialidad: Cardiología</p>
+                    <p class="hospital">📍 Quicentro Sur, Quito • Consultorio 203</p>
+                </div>
+                <a href="reservas_horario.html" class="btn-select">Seleccionar</a>
             </article>
 
-            
-            <article>
-                <figure>
-                    <img src="../img/doctor.png" alt="Foto de perfil del Dr. Juan Pérez alternativa">
-                </figure>
-                <h4>Dr. Juan Pérez</h4>
-                <p>Medicina General</p>
-                <p>Hospital Metropolitano</p>
-                <p>Calificación: 5 de 5 estrellas</p>
-            </article>
-        </section>
-
-       
-        <section aria-labelledby="titulo-detalle-especialista">
-            <h3 id="titulo-detalle-especialista">Información del Especialista</h3>
-            <figure>
-                <img src="../img/DOCTORA.png" alt="Dra. Ana Martínez detalle">
-            </figure>
-            <h4>Dra. Ana Martínez</h4>
-            <p>Cardiología</p>
-            <p>Hospital Metropolitano</p>
-            <p>Información del Especialista...</p>
-            <p>Review: 8 Años de Experiencia</p>
-        </section>
-
-        
-        <section aria-labelledby="titulo-calendario">
-            <h3 id="titulo-calendario">Calendario y Horarios</h3>
-            
-            <div>
-                <h4>Calendario</h4>
-                
-                <time datetime="2026-06">Junio 2026</time>
-                
-            </div>
-
-            <div>
-                <h4>Horarios Disponibles</h4>
-                <ul>
-                    <li><button type="button">08:00 a.m.</button></li>
-                    <li><button type="button">09:00 a.m.</button></li>
-                    <li><button type="button">10:00 a.m.</button></li>
-                    <li><button type="button">11:00 a.m.</button></li>
-                    <li><button type="button">12:00 p.m.</button></li>
-                    <li><button type="button">03:00 p.m.</button></li>
-                </ul>
-            </div>
-
-            <button type="button">Proceder al Pago</button>
-        </section>
-
-        
-        <section aria-labelledby="titulo-garantias">
-            <h3 id="titulo-garantias" hidden>Información y Garantías</h3>
-            
-            <article>
-                <h4>Atencion Confiable</h4>
-                <p>Servicio médico de calidad garantizado.</p>
+            <article class="doctor-card">
+                <img src="../img/DOCTORA.png" alt="" aria-hidden="true" class="doctor-avatar">
+                <div class="info-doc doctor-info">
+                    <h4>Dra. María López</h4>
+                    <p class="specialty">Especialidad: Cardiología</p>
+                    <p class="hospital">📍 Parque la Carolina, Quito • Consultorio 305</p>
+                </div>
+                <a href="reservas_horario.html" class="btn-select">Seleccionar</a>
             </article>
 
-            <article>
-                <h4>Medicos Verificados</h4>
-                <p>Profesionales de la salud certificados.</p>
+            <article class="doctor-card">
+                <img src="../img/DOCTOR2.png" alt="" aria-hidden="true" class="doctor-avatar">
+                <div class="info-doc doctor-info">
+                    <h4>Dr. Carlos Pérez</h4>
+                    <p class="specialty">Especialidad: Odontología</p>
+                    <p class="hospital">📍 Clínica San Rafael, Valle de los Chillos • Consultorio 104</p>
+                </div>
+                <a href="reservas_horario.html" class="btn-select">Seleccionar</a>
             </article>
 
-            <article>
-                <h4>Seguridad en tus datos</h4>
-                <p>Protección total de tu información personal.</p>
+            <article class="doctor-card">
+                <img src="../img/DOCTOR3.png" alt="" aria-hidden="true" class="doctor-avatar">
+                <div class="info-doc doctor-info">
+                    <h4>Dr. Andrés Silva</h4>
+                    <p class="specialty">Especialidad: Dermatología</p>
+                    <p class="hospital">📍 Quicentro Sur, Quito • Consultorio 402</p>
+                </div>
+                <a href="reservas_horario.html" class="btn-select">Seleccionar</a>
             </article>
 
-            <article>
-                <h4>Ayuda y Soporte 24/7</h4>
-                <p>Asistencia disponible en todo momento.</p>
+            <article class="doctor-card">
+                <img src="../img/DOCTORA 4.png" alt="" aria-hidden="true" class="doctor-avatar">
+                <div class="info-doc doctor-info">
+                    <h4>Dra. Andrea Ruiz</h4>
+                    <p class="specialty">Especialidad: Pediatría</p>
+                    <p class="hospital">📍 Hospital Metropolitano, Quito • Consultorio 208</p>
+                </div>
+                <a href="reservas_horario.html" class="btn-select">Seleccionar</a>
             </article>
         </section>
     </main>
 
-    
     <footer>
-        <p>&copy; 2026 MediClick - Todos los derechos reservados.</p>
+        <p>© 2026 MediClick - Todos los derechos reservados.</p>
     </footer>
-
+    <script src="../main.js"></script>
 </body>
 </html>

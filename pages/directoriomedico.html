@@ -5,107 +5,129 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Directorio Médico de MediClick">
-    <meta name="author" content="Johan Vivanco">
+    <meta name="author" content="Johan Vivanco, Nicolas Campos, Elian Valenzuela">
     <title>Directorio Médico | MediClick</title>
 
     <link rel="stylesheet" href="../css_directoriomedico.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 
 <body>
-
-    <!-- CABECERA -->
     <header class="main-header">
         <div class="logo">
             <h1>MediClick</h1>
         </div>
-        <nav class="main-nav">
+        <nav class="main-nav" aria-label="Navegación principal">
             <ul>
                 <li><a href="../index.html">Inicio</a></li>
-                <li><a href="../pages/directoriomedico.html" class="active">Directorio Médico</a></li>
-                <li><a href="../pages/mis_reservas.html">Mis Reservas</a></li>
-                <li><a href="../pages/pantalla-reserva-contacto.html">Contacto</a></li>
-                <li><a href="../pages/pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a></li>
+                <li><a href="directoriomedico.html" class="active" aria-current="page">Directorio Médico</a></li>
+                <li><a href="reservas.html">Reservas</a></li>
+                <li><a href="mis_reservas.html">Mis Reservas</a></li>
+                <li><a href="pantalla-reserva-contacto.html">Contacto</a></li>
+                <li><a href="pantalla-Iniciar-seion.html" class="btn-login">Iniciar Sesión</a></li>
+                <li><a href="registro.html" class="btn-login">Registrarse</a></li>
             </ul>
         </nav>
     </header>
 
     <main>
-        <!-- BANNER HERO SUPERIOR -->
         <section class="hero-directory">
             <article class="hero-directory-text">
                 <h2>Directorio Médico</h2>
-                <p>Busca especialistas y encuentra el médico que necesitas.</p>
+                <p>Busca especialistas, hospitales y consultorios en Quito y sus valles.</p>
             </article>
-
             <aside class="hero-directory-image">
-                <img src="../img/directorio.png" alt="Directorio de médicos">
+                <img src="../img/directorio.png" alt="" aria-hidden="true">
             </aside>
         </section>
 
-        <!-- TARJETA BUSCADOR -->
         <section class="search-card">
-            <h3>Buscar especialista</h3>
-
+            <h3>Buscar especialista o ubicación</h3>
             <form action="#" method="get" class="search-form-row">
                 <div class="field-group">
                     <label for="especialidad">Especialidad</label>
-                    <input 
-                        type="text" 
-                        id="especialidad" 
-                        name="especialidad" 
-                        placeholder="Ejemplo: Cardiología">
+                    <input type="text" id="especialidad" name="especialidad" placeholder="Ejemplo: Cardiología, Odontología">
                 </div>
-
                 <div class="field-group">
-                    <label for="ciudad">Ciudad</label>
-                    <input 
-                        type="text" 
-                        id="ciudad" 
-                        name="ciudad" 
-                        placeholder="Ejemplo: Quito">
+                    <label for="ciudad">Ciudad / Ubicación</label>
+                    <input type="text" id="ciudad" name="ciudad" placeholder="Ejemplo: Quito, Quicentro Sur, Chillos">
                 </div>
-
-                <button type="submit" class="btn-search-blue">
-                    Buscar
-                </button>
+                <button type="submit" class="btn-search-blue">Buscar</button>
             </form>
         </section>
 
-        <!-- LISTADO DE MÉDICOS -->
         <section class="doctors-section">
             <h3>Médicos disponibles</h3>
-
             <div class="doctors-grid">
                 <article class="doctor-card">
+                    <img src="../img/Doctor1.png" alt="" aria-hidden="true" class="doctor-avatar">
+                    <div class="doctor-info">
+                        <h4>Dr. Felipe Campos</h4>
+                        <p class="specialty">Especialidad: Odontología / Dentista</p>
+                        <p class="hospital">📍 Hospital Metropolitano, Quito</p>
+                        <p class="hospital" style="font-size: 12px; color: var(--primary-blue);">Consultorio 101 • Lunes a Viernes</p>
+                    </div>
+                </article>
+                <article class="doctor-card">
+                    <img src="../img/doctor.png" alt="" aria-hidden="true" class="doctor-avatar">
+                    <div class="doctor-info">
+                        <h4>Dr. Elian Valenzuela</h4>
+                        <p class="specialty">Especialidad: Cardiología</p>
+                        <p class="hospital">📍 Quicentro Sur, Quito</p>
+                        <p class="hospital" style="font-size: 12px; color: var(--primary-blue);">Consultorio 203 • Martes a Sábado</p>
+                    </div>
+                </article>
+                <article class="doctor-card">
+                    <img src="../img/DOCTORA.png" alt="" aria-hidden="true" class="doctor-avatar">
                     <div class="doctor-info">
                         <h4>Dra. María López</h4>
                         <p class="specialty">Especialidad: Cardiología</p>
-                        <p class="hospital">Horario: Lunes a Viernes</p>
+                        <p class="hospital">📍 Parque la Carolina, Quito</p>
+                        <p class="hospital" style="font-size: 12px; color: var(--primary-blue);">Consultorio 305 • Lunes a Viernes</p>
                     </div>
                 </article>
-
                 <article class="doctor-card">
+                    <img src="../img/DOCTOR2.png" alt="" aria-hidden="true" class="doctor-avatar">
                     <div class="doctor-info">
                         <h4>Dr. Carlos Pérez</h4>
                         <p class="specialty">Especialidad: Odontología</p>
-                        <p class="hospital">Horario: Martes a Sábado</p>
+                        <p class="hospital">📍 Clínica San Rafael, Valle de los Chillos</p>
+                        <p class="hospital" style="font-size: 12px; color: var(--primary-blue);">Consultorio 104 • Lunes a Viernes</p>
                     </div>
                 </article>
-
                 <article class="doctor-card">
+                    <img src="../img/DOCTOR3.png" alt="" aria-hidden="true" class="doctor-avatar">
+                    <div class="doctor-info">
+                        <h4>Dr. Andrés Silva</h4>
+                        <p class="specialty">Especialidad: Dermatología</p>
+                        <p class="hospital">📍 Quicentro Sur, Quito</p>
+                        <p class="hospital" style="font-size: 12px; color: var(--primary-blue);">Consultorio 402 • Miércoles a Viernes</p>
+                    </div>
+                </article>
+                <article class="doctor-card">
+                    <img src="../img/DOCTORA 4.png" alt="" aria-hidden="true" class="doctor-avatar">
                     <div class="doctor-info">
                         <h4>Dra. Andrea Ruiz</h4>
                         <p class="specialty">Especialidad: Pediatría</p>
-                        <p class="hospital">Horario: Lunes a Viernes</p>
+                        <p class="hospital">📍 Hospital Metropolitano, Quito</p>
+                        <p class="hospital" style="font-size: 12px; color: var(--primary-blue);">Consultorio 208 • Lunes a Viernes</p>
                     </div>
                 </article>
             </div>
         </section>
     </main>
 
+    <section class="features-bar">
+        <div class="feature-item"><i class="fa-solid fa-shield-halved" aria-hidden="true"></i> Atención Confiable</div>
+        <div class="feature-item"><i class="fa-solid fa-user-check" aria-hidden="true"></i> Médicos Verificados</div>
+        <div class="feature-item"><i class="fa-solid fa-lock" aria-hidden="true"></i> Seguridad en tus datos</div>
+        <div class="feature-item"><i class="fa-solid fa-headset" aria-hidden="true"></i> Ayuda y Soporte 24/7</div>
+    </section>
+
     <footer>
         <p>© 2026 MediClick - Todos los derechos reservados.</p>
     </footer>
-
+    <script src="../main.js"></script>
 </body>
+
 </html>
