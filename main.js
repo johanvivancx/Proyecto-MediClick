@@ -1,127 +1,173 @@
 document.addEventListener("DOMContentLoaded", () => {
+
     function normalizar(texto) {
-        return texto.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase().trim();
+        return texto
+            .normalize("NFD")
+            .replace(/[\u0300-\u036f]/g, "")
+            .toLowerCase()
+            .trim();
     }
 
     const searchForm = document.querySelector(".search-form-row");
 
-if (searchForm) {
-    const doctorCards = document.querySelectorAll(".doctor-card");
+    if (searchForm) {
 
-    const listaDoctores =
-        document.querySelector(".doctor-list") ||
-        document.querySelector(".doctors-list") ||
-        doctorCards[0]?.parentElement;
+        const doctorCards = document.querySelectorAll(".doctor-card");
 
-    let mensajeVacio = document.querySelector(".no-results-message");
+        const listaDoctores =
+            document.querySelector(".doctor-list") ||
+            document.querySelector(".doctors-list") ||
+            doctorCards[0]?.parentElement;
 
-    if (!mensajeVacio && listaDoctores) {
-        mensajeVacio = document.createElement("div");
-        mensajeVacio.className = "no-results-message";
-        mensajeVacio.textContent =
-            "No se encontraron especialistas con los criterios seleccionados.";
-        mensajeVacio.hidden = true;
-        listaDoctores.appendChild(mensajeVacio);
-    }
+        let mensajeVacio = document.querySelector(".no-results-message");
 
-    searchForm.addEventListener("submit", (e) => {
-        e.preventDefault();
+        if (!mensajeVacio && listaDoctores) {
+            mensajeVacio = document.createElement("div");
+            mensajeVacio.className = "no-results-message";
+            mensajeVacio.textContent =
+                "No se encontraron especialistas con los criterios seleccionados.";
+            mensajeVacio.style.display = "none";
+            listaDoctores.appendChild(mensajeVacio);
+        }
 
-        const inputs = searchForm.querySelectorAll("input");
+        searchForm.addEventListener("submit", (e) => {
 
-        const espQuery = inputs[0]
-            ? normalizar(inputs[0].value)
-            : "";
+            e.preventDefault();
 
-        const ciudadQuery = inputs[1]
-            ? normalizar(inputs[1].value)
-            : "";
+            const inputs = searchForm.querySelectorAll("input");
 
-        let resultados = 0;
+            const espQuery = inputs[0]
+                ? normalizar(inputs[0].value)
+                : "";
 
-        doctorCards.forEach((card) => {
-            const textCard = normalizar(card.textContent);
+            const ciudadQuery = inputs[1]
+                ? normalizar(inputs[1].value)
+                : "";
 
-            const matchEsp =
-                espQuery === "" || textCard.includes(espQuery);
+            let resultados = 0;
 
-            const matchCiudad =
-                ciudadQuery === "" || textCard.includes(ciudadQuery);
+            doctorCards.forEach((card) => {
 
-            const coincide = matchEsp && matchCiudad;
+                const textCard = normalizar(card.textContent);
 
-            card.hidden = !coincide;
+                const matchEsp =
+                    espQuery === "" ||
+                    textCard.includes(espQuery);
 
-            if (coincide) {
-                resultados++;
+                const matchCiudad =
+                    ciudadQuery === "" ||
+                    textCard.includes(ciudadQuery);
+
+                const coincide = matchEsp && matchCiudad;
+
+                if (coincide) {
+                    card.style.display = "flex";
+                    resultados++;
+                } else {
+                    card.style.display = "none";
+                }
+            });
+
+            if (mensajeVacio) {
+                if (resultados === 0) {
+                    mensajeVacio.style.display = "block";
+                } else {
+                    mensajeVacio.style.display = "none";
+                }
             }
         });
-
-        if (mensajeVacio) {
-            mensajeVacio.hidden = resultados !== 0;
-        }
-    });
-}
+    }
 
     const formRegistro = document.querySelector(".registro-form");
+
     if (formRegistro) {
+
         formRegistro.addEventListener("submit", (e) => {
+
             const pass = document.getElementById("password")?.value;
             const confirmPass = document.getElementById("confirm-password")?.value;
-            
+
             if (pass && confirmPass && pass !== confirmPass) {
+
                 e.preventDefault();
+
                 alert("Las contraseñas no coinciden. Por favor, verifica.");
-                document.getElementById("confirm-password").focus();
+
+                document
+                    .getElementById("confirm-password")
+                    .focus();
+
             } else if (pass && confirmPass) {
-                const btn = formRegistro.querySelector("button[type='submit']");
+
+                const btn =
+                    formRegistro.querySelector("button[type='submit']");
+
                 if (btn) {
                     btn.textContent = "Procesando...";
                     btn.disabled = true;
-                    btn.setAttribute("aria-busy", "true");  
+                    btn.setAttribute("aria-busy", "true");
                 }
             }
         });
     }
 
     const btnHorarios = document.querySelectorAll(
-    ".calendario ul li button"
-);
+        ".calendario ul li button"
+    );
 
-if (btnHorarios.length > 0) {
-    btnHorarios.forEach((btn) => {
-        btn.addEventListener("click", () => {
+    if (btnHorarios.length > 0) {
 
-            btnHorarios.forEach((otroBoton) => {
-                otroBoton.classList.remove("horario-seleccionado");
-                otroBoton.setAttribute("aria-pressed", "false");
+        btnHorarios.forEach((btn) => {
+
+            btn.setAttribute("aria-pressed", "false");
+
+            btn.addEventListener("click", () => {
+
+                btnHorarios.forEach((otroBoton) => {
+                    otroBoton.classList.remove("horario-seleccionado");
+                    otroBoton.setAttribute("aria-pressed", "false");
+                });
+
+                btn.classList.add("horario-seleccionado");
+                btn.setAttribute("aria-pressed", "true");
             });
-
-            btn.classList.add("horario-seleccionado");
-            btn.setAttribute("aria-pressed", "true");
         });
-    });
-}
+    }
+
     const inputTarjeta = document.getElementById("numero-tarjeta");
+
     if (inputTarjeta) {
+
         inputTarjeta.addEventListener("input", (e) => {
+
             let valor = e.target.value.replace(/\D/g, "");
-            valor = valor.replace(/(\d{4})/g, "$1 ").trim();
+
+            valor = valor
+                .replace(/(\d{4})/g, "$1 ")
+                .trim();
+
             e.target.value = valor;
         });
     }
 
     const inputCVV = document.getElementById("codigo-cvv");
+
     if (inputCVV) {
+
         inputCVV.addEventListener("input", (e) => {
             e.target.value = e.target.value.replace(/\D/g, "");
         });
     }
 
     const formLogin = document.querySelector(".formulario-login");
+
     if (formLogin) {
+
         formLogin.addEventListener("submit", () => {
-            const btn = formLogin.querySelector("button[type='submit']");
+
+            const btn =
+                formLogin.querySelector("button[type='submit']");
+
             if (btn) {
                 btn.textContent = "Verificando...";
                 btn.disabled = true;
@@ -129,4 +175,5 @@ if (btnHorarios.length > 0) {
             }
         });
     }
+
 });

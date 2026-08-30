@@ -207,3 +207,21 @@ footer { text-align: center; padding: 25px; background-color: var(--white); font
     border-color: var(--primary-blue);
     transform: translateY(-2px);
 }
+
+.no-results-message {
+    width: 100%;
+    padding: 20px;
+    margin-top: 20px;
+    text-align: center;
+    font-size: 16px;
+    font-weight: 600;
+    color: #6c757d;
+    background-color: #ffffff;
+    border-radius: 10px;
+}
+
+.horario-seleccionado {
+    background-color: var(--primary-blue) !important;
+    color: white !important;
+    border-color: var(--primary-blue) !important;
+}
