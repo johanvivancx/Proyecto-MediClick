@@ -4,27 +4,64 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     const searchForm = document.querySelector(".search-form-row");
-    if (searchForm) {
-        searchForm.addEventListener("submit", (e) => {
-            e.preventDefault();
-            const inputs = searchForm.querySelectorAll("input");
-            const espQuery = inputs[0] ? normalizar(inputs[0].value) : "";
-            const ciudadQuery = inputs[1] ? normalizar(inputs[1].value) : "";
-            
-            const doctorCards = document.querySelectorAll(".doctor-card");
-            doctorCards.forEach(card => {
-                const textCard = normalizar(card.textContent);
-                const matchEsp = espQuery === "" || textCard.includes(espQuery);
-                const matchCiudad = ciudadQuery === "" || textCard.includes(ciudadQuery);
-                
-                if (matchEsp && matchCiudad) {
-                    card.style.display = "flex";
-                } else {
-                    card.style.display = "none";
-                }
-            });
-        });
+
+if (searchForm) {
+    const doctorCards = document.querySelectorAll(".doctor-card");
+
+    const listaDoctores =
+        document.querySelector(".doctor-list") ||
+        document.querySelector(".doctors-list") ||
+        doctorCards[0]?.parentElement;
+
+    let mensajeVacio = document.querySelector(".no-results-message");
+
+    if (!mensajeVacio && listaDoctores) {
+        mensajeVacio = document.createElement("div");
+        mensajeVacio.className = "no-results-message";
+        mensajeVacio.textContent =
+            "No se encontraron especialistas con los criterios seleccionados.";
+        mensajeVacio.hidden = true;
+        listaDoctores.appendChild(mensajeVacio);
     }
+
+    searchForm.addEventListener("submit", (e) => {
+        e.preventDefault();
+
+        const inputs = searchForm.querySelectorAll("input");
+
+        const espQuery = inputs[0]
+            ? normalizar(inputs[0].value)
+            : "";
+
+        const ciudadQuery = inputs[1]
+            ? normalizar(inputs[1].value)
+            : "";
+
+        let resultados = 0;
+
+        doctorCards.forEach((card) => {
+            const textCard = normalizar(card.textContent);
+
+            const matchEsp =
+                espQuery === "" || textCard.includes(espQuery);
+
+            const matchCiudad =
+                ciudadQuery === "" || textCard.includes(ciudadQuery);
+
+            const coincide = matchEsp && matchCiudad;
+
+            card.hidden = !coincide;
+
+            if (coincide) {
+                resultados++;
+            }
+        });
+
+        if (mensajeVacio) {
+            mensajeVacio.hidden = resultados !== 0;
+        }
+    });
+}
 
     const formRegistro = document.querySelector(".registro-form");
     if (formRegistro) {

@@ -167,3 +167,19 @@ footer { text-align: center; padding: 25px; background-color: var(--white); font
         gap: 15px;
     }
 }
+
+.no-results-message {
+    width: 100%;
+    padding: 25px;
+    margin-top: 15px;
+    background-color: #ffffff;
+    border: 1px solid #d9e2ec;
+    border-radius: 10px;
+    text-align: center;
+    color: #6c757d;
+    font-weight: 600;
+}
+
+.no-results-message[hidden] {
+    display: none;
+}
