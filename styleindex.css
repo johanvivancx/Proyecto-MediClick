@@ -424,3 +424,23 @@ footer {
         flex: 1 1 calc(25% - 1rem);
     }
 }
+
+
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+select:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid rgba(0, 136, 255, 0.45);
+    outline-offset: 3px;
+}
+
+.main-nav a:focus-visible {
+    border-radius: 5px;
+}
+
+.btn-login:focus-visible,
+.btn-search:focus-visible {
+    outline: 3px solid rgba(0, 136, 255, 0.45);
+    outline-offset: 3px;
+}
