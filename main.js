@@ -10,73 +10,65 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const searchForm = document.querySelector(".search-form-row");
 
-    if (searchForm) {
+if (searchForm) {
 
-        const doctorCards = document.querySelectorAll(".doctor-card");
+    const doctorCards = document.querySelectorAll(".doctor-card");
 
-        const listaDoctores =
-            document.querySelector(".doctor-list") ||
-            document.querySelector(".doctors-list") ||
-            doctorCards[0]?.parentElement;
+    searchForm.addEventListener("submit", (e) => {
 
-        let mensajeVacio = document.querySelector(".no-results-message");
+        e.preventDefault();
 
-        if (!mensajeVacio && listaDoctores) {
-            mensajeVacio = document.createElement("div");
-            mensajeVacio.className = "no-results-message";
-            mensajeVacio.textContent =
-                "No se encontraron especialistas con los criterios seleccionados.";
-            mensajeVacio.style.display = "none";
-            listaDoctores.appendChild(mensajeVacio);
-        }
+        const especialidad = normalizar(
+            document.getElementById("especialidad").value
+        );
 
-        searchForm.addEventListener("submit", (e) => {
+        const ciudad = normalizar(
+            document.getElementById("ciudad").value
+        );
 
-            e.preventDefault();
+        let encontrados = 0;
 
-            const inputs = searchForm.querySelectorAll("input");
+        doctorCards.forEach((card) => {
 
-            const espQuery = inputs[0]
-                ? normalizar(inputs[0].value)
-                : "";
+            const especialidadDoctor = normalizar(
+                card.querySelector(".specialty").textContent
+            );
 
-            const ciudadQuery = inputs[1]
-                ? normalizar(inputs[1].value)
-                : "";
+            const ciudadDoctor = normalizar(
+                card.querySelector(".hospital").textContent
+            );
 
-            let resultados = 0;
+            const coincideEspecialidad =
+                especialidad === "" ||
+                especialidadDoctor.includes(especialidad);
 
-            doctorCards.forEach((card) => {
+            const coincideCiudad =
+                ciudad === "" ||
+                ciudadDoctor.includes(ciudad);
 
-                const textCard = normalizar(card.textContent);
-
-                const matchEsp =
-                    espQuery === "" ||
-                    textCard.includes(espQuery);
-
-                const matchCiudad =
-                    ciudadQuery === "" ||
-                    textCard.includes(ciudadQuery);
-
-                const coincide = matchEsp && matchCiudad;
-
-                if (coincide) {
-                    card.style.display = "flex";
-                    resultados++;
-                } else {
-                    card.style.display = "none";
-                }
-            });
-
-            if (mensajeVacio) {
-                if (resultados === 0) {
-                    mensajeVacio.style.display = "block";
-                } else {
-                    mensajeVacio.style.display = "none";
-                }
+            if (coincideEspecialidad && coincideCiudad) {
+                card.style.setProperty("display", "flex", "important");
+                encontrados++;
+            } else {
+                card.style.setProperty("display", "none", "important");
             }
         });
-    }
+
+        let mensaje = document.querySelector(".no-results-message");
+
+        if (!mensaje) {
+            mensaje = document.createElement("p");
+            mensaje.className = "no-results-message";
+            mensaje.textContent =
+                "No se encontraron especialistas con esos datos.";
+
+            document.querySelector(".lista").appendChild(mensaje);
+        }
+
+        mensaje.style.display =
+            encontrados === 0 ? "block" : "none";
+    });
+}
 
     const formRegistro = document.querySelector(".registro-form");
 
