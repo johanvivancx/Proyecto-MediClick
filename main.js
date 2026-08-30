@@ -77,8 +77,8 @@ if (searchForm) {
                 const btn = formRegistro.querySelector("button[type='submit']");
                 if (btn) {
                     btn.textContent = "Procesando...";
-                    btn.style.opacity = "0.7";
-                    btn.style.pointerEvents = "none";
+                    btn.disabled = true;
+                    btn.setAttribute("aria-busy", "true");  
                 }
             }
         });
@@ -124,8 +124,8 @@ if (btnHorarios.length > 0) {
             const btn = formLogin.querySelector("button[type='submit']");
             if (btn) {
                 btn.textContent = "Verificando...";
-                btn.style.opacity = "0.7";
-                btn.style.pointerEvents = "none";
+                btn.disabled = true;
+                btn.setAttribute("aria-busy", "true");
             }
         });
     }
