@@ -84,22 +84,24 @@ if (searchForm) {
         });
     }
 
-    const btnHorarios = document.querySelectorAll(".calendario ul li button");
-    if (btnHorarios.length > 0) {
-        btnHorarios.forEach(btn => {
-            btn.addEventListener("click", () => {
-                btnHorarios.forEach(b => {
-                    b.style.backgroundColor = "var(--white)";
-                    b.style.color = "var(--text-dark)";
-                    b.style.borderColor = "#e2e8f0";
-                });
-                btn.style.backgroundColor = "var(--primary-blue)";
-                btn.style.color = "var(--white)";
-                btn.style.borderColor = "var(--primary-blue)";
-            });
-        });
-    }
+    const btnHorarios = document.querySelectorAll(
+    ".calendario ul li button"
+);
 
+if (btnHorarios.length > 0) {
+    btnHorarios.forEach((btn) => {
+        btn.addEventListener("click", () => {
+
+            btnHorarios.forEach((otroBoton) => {
+                otroBoton.classList.remove("horario-seleccionado");
+                otroBoton.setAttribute("aria-pressed", "false");
+            });
+
+            btn.classList.add("horario-seleccionado");
+            btn.setAttribute("aria-pressed", "true");
+        });
+    });
+}
     const inputTarjeta = document.getElementById("numero-tarjeta");
     if (inputTarjeta) {
         inputTarjeta.addEventListener("input", (e) => {
