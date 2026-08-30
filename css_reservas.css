@@ -183,3 +183,27 @@ footer { text-align: center; padding: 25px; background-color: var(--white); font
 .no-results-message[hidden] {
     display: none;
 }
+
+.calendario ul li button {
+    transition:
+        background-color 0.2s ease,
+        color 0.2s ease,
+        border-color 0.2s ease,
+        transform 0.2s ease;
+}
+
+.calendario ul li button:hover {
+    border-color: var(--primary-blue);
+}
+
+.calendario ul li button:focus-visible {
+    outline: 3px solid rgba(0, 136, 255, 0.3);
+    outline-offset: 2px;
+}
+
+.calendario ul li button.horario-seleccionado {
+    background-color: var(--primary-blue);
+    color: var(--white);
+    border-color: var(--primary-blue);
+    transform: translateY(-2px);
+}
