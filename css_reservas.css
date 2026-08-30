@@ -83,3 +83,87 @@ footer { text-align: center; padding: 25px; background-color: var(--white); font
     .step-indicator ol li::before { width: 30px; height: 30px; font-size: 13px; }
     .lista article { flex-direction: column; text-align: center; }
 }
+
+@media (max-width: 900px) {
+    header {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 18px;
+        padding: 20px 15px;
+    }
+
+    header h1 {
+        font-size: 24px;
+        text-align: center;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 12px;
+        width: 100%;
+    }
+
+    nav ul li {
+        width: 100%;
+        text-align: center;
+    }
+
+    nav a {
+        display: inline-block;
+        font-size: 14px;
+        padding: 6px 10px;
+        white-space: nowrap;
+    }
+
+    nav ul li:last-child a {
+        min-width: 160px;
+        padding: 11px 18px;
+        text-align: center;
+    }
+
+    main > section:first-of-type {
+        flex-direction: column;
+        gap: 25px;
+        padding: 25px 15px;
+        text-align: center;
+    }
+
+    main > section:first-of-type ol {
+        gap: 25px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
+
+@media (max-width: 480px) {
+    header {
+        padding: 18px 10px;
+    }
+
+    nav ul {
+        gap: 10px;
+    }
+
+    nav ul li:last-child a {
+        width: 160px;
+    }
+
+    main {
+        padding: 12px;
+    }
+
+    main > section:first-of-type {
+        padding: 20px 10px;
+    }
+
+    main > section:first-of-type ol {
+        gap: 15px;
+    }
+}
